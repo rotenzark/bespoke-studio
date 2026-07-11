@@ -170,6 +170,8 @@
     'camp.crescente.open':  { it: 'Apri il sito di Crescente Parrucchiere in una nuova scheda', en: 'Open the Crescente Parrucchiere website in a new tab' },
     'camp.delmonaco.short': { it: 'Salone con 4,9 su 542 recensioni in via Pastrengo: la cartella colori delle tinte diventa la grafica del sito, con le foto vere del salone.', en: "A salon rated 4.9 across 542 reviews on Via Pastrengo: the hair-colour chart becomes the site's visual system, with real salon photos." },
     'camp.delmonaco.open':  { it: 'Apri il sito di Del Monaco Hair Design in una nuova scheda', en: 'Open the Del Monaco Hair Design website in a new tab' },
+    'camp.latteneve.short': { it: 'Gelateria tradizionale sul Naviglio, segnalata dal Gambero Rosso: la sua parete degli ingredienti diventa la firma grafica del sito.', en: "A traditional gelateria by the Naviglio, listed by Gambero Rosso: its ingredient wall becomes the site's visual signature." },
+    'camp.latteneve.open':  { it: 'Apri il sito di LatteNeve in una nuova scheda', en: 'Open the LatteNeve website in a new tab' },
     'camp.slot.label':   { it: 'PROSSIMO PEZZO', en: 'NEXT PIECE' },
     'camp.slot.name':    { it: 'Il tuo progetto', en: 'Your project' },
     'camp.slot.desc':    { it: 'Questo posto nel campionario è libero. Raccontaci la tua attività: prendiamo le misure senza impegno.', en: 'This spot in the sample book is free. Tell us about your business: a fitting costs nothing.' },
