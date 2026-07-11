@@ -104,9 +104,6 @@ a { color: inherit; }
   height: 100%;
   overflow: visible;
 }
-.thread-bg .thread-reveal {
-  transition: stroke-dashoffset 0.25s ease-out;
-}
 
 /* ============================================================
    INTRO — il filo cuce la scritta

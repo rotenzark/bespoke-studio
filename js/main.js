@@ -246,7 +246,12 @@
 
     var NS = 'http://www.w3.org/2000/svg';
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var HEAD_START = 0.06; // quota di filo già cucita quando la pagina è in cima
+    // Il filo è un segmento che viaggia con lo scroll: in cima non c'è,
+    // entra dall'alto appena si scorre (la testa corre più veloce dello
+    // scroll) e sparisce in basso a fine pagina (la coda parte dopo e
+    // arriva al fondo esattamente a scroll completo).
+    var HEAD_SPEED = 1.30;
+    var TAIL_START = 0.22;
 
     // il percorso del filo: frazioni di larghezza/altezza pagina
     var POINTS = [
@@ -275,13 +280,53 @@
     var revealPath = null;
     var threadLen = 0;
     var builtH = 0;
+    var curHead = 0, curTail = 0, tgtHead = 0, tgtTail = 0;
+    var animating = false;
 
-    function update() {
-      if (!revealPath) return;
+    function computeTargets() {
       var max = document.body.scrollHeight - window.innerHeight;
       var p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 1;
-      var visible = (HEAD_START + (1 - HEAD_START) * p) * threadLen;
-      revealPath.style.strokeDashoffset = String(threadLen - visible);
+      tgtHead = threadLen * Math.min(1, p * HEAD_SPEED);
+      tgtTail = threadLen * Math.min(1, Math.max(0, (p - TAIL_START) / (1 - TAIL_START)));
+    }
+
+    function applySegment() {
+      if (!revealPath) return;
+      var seg = Math.max(0, curHead - curTail);
+      // sotto 1px di segmento l'elemento sparisce del tutto: un dash
+      // quasi-zero con linecap round renderebbe un puntino residuo
+      if (seg < 1) {
+        revealPath.setAttribute('visibility', 'hidden');
+        return;
+      }
+      revealPath.setAttribute('visibility', 'visible');
+      revealPath.setAttribute('stroke-dasharray', seg.toFixed(1) + ' ' + Math.ceil(threadLen + 10));
+      revealPath.setAttribute('stroke-dashoffset', (-curTail).toFixed(1));
+    }
+
+    function tick() {
+      var dh = tgtHead - curHead;
+      var dt = tgtTail - curTail;
+      if (Math.abs(dh) < 0.5 && Math.abs(dt) < 0.5) {
+        curHead = tgtHead;
+        curTail = tgtTail;
+        applySegment();
+        animating = false;
+        return;
+      }
+      curHead += dh * 0.16;
+      curTail += dt * 0.16;
+      applySegment();
+      requestAnimationFrame(tick);
+    }
+
+    function kick() {
+      if (!revealPath) return;
+      computeTargets();
+      if (!animating) {
+        animating = true;
+        requestAnimationFrame(tick);
+      }
     }
 
     function build() {
@@ -339,30 +384,27 @@
       document.body.insertBefore(wrap, document.body.firstChild);
 
       threadLen = revealPath.getTotalLength();
-      revealPath.style.strokeDasharray = threadLen + ' ' + threadLen;
 
       if (reduce) {
-        revealPath.style.strokeDashoffset = '0'; // già tutto cucito, niente motion
+        // niente motion: filo fermo, cucito da cima a fondo
+        revealPath.removeAttribute('stroke-dasharray');
+        revealPath.removeAttribute('stroke-dashoffset');
       } else {
-        revealPath.style.strokeDashoffset = String(threadLen);
-        update();
+        computeTargets();
+        curHead = tgtHead;
+        curTail = tgtTail;
+        applySegment();
       }
     }
 
     build();
     window.addEventListener('load', function () {
       if (Math.abs(document.body.scrollHeight - builtH) > 80) build();
-      update();
+      else kick();
     });
 
     if (!reduce) {
-      var ticking = false;
-      window.addEventListener('scroll', function () {
-        if (!ticking) {
-          ticking = true;
-          requestAnimationFrame(function () { ticking = false; update(); });
-        }
-      }, { passive: true });
+      window.addEventListener('scroll', kick, { passive: true });
     }
 
     var resizeTimer = null;
@@ -370,7 +412,7 @@
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(function () {
         if (document.documentElement.clientWidth && Math.abs(document.body.scrollHeight - builtH) > 0) build();
-        else update();
+        else kick();
       }, 250);
     });
 
