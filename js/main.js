@@ -207,30 +207,117 @@
   if (storedLang === 'en') applyLang('en');
 
   /* ----------------------------------------------------------
-     Reveal on scroll + cuciture
+     Reveal on scroll + cuciture — partono a intro conclusa
      ---------------------------------------------------------- */
-  var observed = document.querySelectorAll('.reveal, .seam');
+  var pageStarted = false;
 
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  function startPageAnimations() {
+    if (pageStarted) return;
+    pageStarted = true;
 
-    observed.forEach(function (el) { io.observe(el); });
-  } else {
-    observed.forEach(function (el) { el.classList.add('in-view'); });
-  }
+    var observed = document.querySelectorAll('.reveal, .seam');
 
-  // La cucitura sotto "su misura" parte dopo il reveal del titolo
-  window.addEventListener('load', function () {
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+      observed.forEach(function (el) { io.observe(el); });
+    } else {
+      observed.forEach(function (el) { el.classList.add('in-view'); });
+    }
+
+    // La cucitura sotto "su misura" parte dopo il reveal del titolo
     var stitch = document.querySelector('.stitch--hero');
     if (stitch) stitch.classList.add('is-sewn');
-  });
+  }
+
+  /* ----------------------------------------------------------
+     Intro: il filo ricama "Bespoke" lettera per lettera
+     ---------------------------------------------------------- */
+  (function () {
+    var intro = document.getElementById('intro');
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!intro || reduce || !window.SVGTextContentElement) {
+      if (intro && intro.parentNode) intro.parentNode.removeChild(intro);
+      startPageAnimations();
+      return;
+    }
+
+    var LETTER_STAGGER = 0.12; // ritardo tra una lettera e la successiva
+    var DRAW = 0.85;           // durata della cucitura di una lettera
+    var FILL_DELAY = 0.62;     // il riempimento parte a cucitura quasi finita
+    var FILL = 0.55;
+
+    var cleaned = false;
+    function cleanup() {
+      if (cleaned) return;
+      cleaned = true;
+      if (intro.parentNode) intro.parentNode.removeChild(intro);
+      document.body.style.overflow = '';
+      startPageAnimations();
+    }
+
+    document.body.style.overflow = 'hidden';
+    // se qualcosa va storto (font che non arrivano, ecc.) il sito parte comunque
+    var safety = setTimeout(cleanup, 6000);
+
+    var fontsReady = (document.fonts && document.fonts.ready)
+      ? document.fonts.ready : Promise.resolve();
+
+    fontsReady.then(function () {
+      if (cleaned) return;
+      try {
+        var word = document.getElementById('intro-word');
+        var svg = intro.querySelector('svg');
+        var NS = 'http://www.w3.org/2000/svg';
+        var chars = word.textContent;
+        var n = chars.length;
+
+        for (var i = 0; i < n; i++) {
+          var pos = word.getStartPositionOfChar(i);
+          var letter = document.createElementNS(NS, 'text');
+          letter.setAttribute('class', 'intro__letter');
+          letter.setAttribute('x', pos.x);
+          letter.setAttribute('y', pos.y);
+          letter.style.setProperty('--i', i);
+          letter.textContent = chars[i];
+          svg.appendChild(letter);
+        }
+
+        // il nodo rosso del marchio, a fine parola
+        var end = word.getEndPositionOfChar(n - 1);
+        var knotDelay = (n - 1) * LETTER_STAGGER + DRAW;
+        var knot = document.createElementNS(NS, 'circle');
+        knot.setAttribute('class', 'intro__knot');
+        knot.setAttribute('cx', end.x + 18);
+        knot.setAttribute('cy', 42);
+        knot.setAttribute('r', 7);
+        knot.style.setProperty('--knot-delay', knotDelay + 's');
+        svg.appendChild(knot);
+
+        word.style.visibility = 'hidden';
+        intro.classList.add('is-sewing');
+
+        var filledAt = ((n - 1) * LETTER_STAGGER + FILL_DELAY + FILL) * 1000;
+        setTimeout(function () { intro.classList.add('is-filled'); }, filledAt - 200);
+        setTimeout(function () {
+          clearTimeout(safety);
+          intro.classList.add('is-done');
+          intro.addEventListener('transitionend', cleanup, { once: true });
+          setTimeout(cleanup, 1200); // rete di sicurezza sul transitionend
+        }, filledAt + 650);
+      } catch (e) {
+        cleanup();
+      }
+    });
+  })();
 
   /* ----------------------------------------------------------
      Menu mobile

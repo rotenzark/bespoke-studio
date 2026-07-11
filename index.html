@@ -37,11 +37,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..640;1,9..144,340..640&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="css/style.css?v=4">
 </head>
 <body>
 
   <a class="skip-link" href="#main" data-i18n="skip">Salta al contenuto</a>
+
+  <!-- Intro di caricamento: il filo cuce la scritta -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <svg class="intro__svg" viewBox="0 0 640 150" focusable="false">
+      <text class="intro__word" id="intro-word" x="320" y="104" text-anchor="middle">Bespoke</text>
+    </svg>
+    <p class="intro__sub mono">STUDIO · MILANO</p>
+  </div>
 
   <!-- ===================== NAV ===================== -->
   <header class="nav" id="top">
@@ -356,6 +364,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=2"></script>
+  <script src="js/main.js?v=3"></script>
 </body>
 </html>
