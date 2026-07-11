@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Bespoke Studio — Biglietti da visita (85×55 mm + 3 mm abbondanza)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..640;1,9..144,340..640&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Formato finale 85×55 mm — pagina 91×61 mm = 3 mm di abbondanza per lato.
+     Area di sicurezza: tenere i contenuti ad almeno 8 mm dal bordo pagina. */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: 91mm 61mm; margin: 0; }
+
+  :root {
+    --ink: #131110;
+    --bone: #EFE9DD;
+    --greige: #A9A094;
+    --thread: #C4442E;
+  }
+
+  body { font-family: "Archivo", sans-serif; }
+
+  .page {
+    width: 91mm;
+    height: 61mm;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ------------------------- FRONTE ------------------------- */
+  .front {
+    background: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .front .mark {
+    position: absolute;
+    width: 5mm; height: 5mm;
+    opacity: 0.45;
+  }
+  .front .mark--tl { top: 8mm; left: 8mm; border-top: 0.3mm solid var(--bone); border-left: 0.3mm solid var(--bone); }
+  .front .mark--br { bottom: 8mm; right: 8mm; border-bottom: 0.3mm solid var(--bone); border-right: 0.3mm solid var(--bone); }
+
+  .front .name {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24pt;
+    color: var(--bone);
+    line-height: 1;
+  }
+  .front .name::after {
+    content: "";
+    display: inline-block;
+    width: 2.6mm; height: 2.6mm;
+    margin-left: 1.6mm;
+    border-radius: 50%;
+    background: var(--thread);
+    vertical-align: 0.45em;
+  }
+  .front .sub {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 5.6pt;
+    letter-spacing: 0.42em;
+    color: var(--greige);
+    margin-top: 3mm;
+  }
+  .front .stitch {
+    margin: 4.5mm auto 0;
+    width: 26mm; height: 3mm;
+    overflow: visible;
+    display: block;
+  }
+  .front .stitch path { stroke: var(--thread); stroke-width: 0.5mm; stroke-dasharray: 2mm 1.4mm; stroke-linecap: round; fill: none; }
+  .front .stitch circle { fill: var(--thread); }
+
+  /* ------------------------- RETRO ------------------------- */
+  .back {
+    background: var(--bone);
+    color: var(--ink);
+    padding: 9mm 10mm;
+    display: flex;
+    flex-direction: column;
+  }
+  .back .seam {
+    position: absolute;
+    top: 8mm; left: 10mm; right: 10mm;
+    height: 0.5mm;
+    background: repeating-linear-gradient(90deg, var(--thread) 0 1.8mm, transparent 1.8mm 3mm);
+  }
+  .back .who { margin-top: 4mm; }
+  .back .who .nome {
+    font-weight: 600;
+    font-size: 12.5pt;
+    letter-spacing: 0.01em;
+  }
+  .back .who .ruolo {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 5.4pt;
+    letter-spacing: 0.24em;
+    color: var(--thread);
+    margin-top: 1.6mm;
+  }
+  .back .dati {
+    margin-top: auto;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 6.4pt;
+    letter-spacing: 0.06em;
+    line-height: 2.1;
+    color: #3A342E;
+  }
+  .back .dati strong { font-weight: 500; color: var(--ink); }
+  .back .brand {
+    position: absolute;
+    bottom: 9mm; right: 10mm;
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 9pt;
+    color: var(--ink);
+  }
+  .back .brand::after {
+    content: "";
+    display: inline-block;
+    width: 1.4mm; height: 1.4mm;
+    margin-left: 0.9mm;
+    border-radius: 50%;
+    background: var(--thread);
+    vertical-align: 0.4em;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Pagina 1: fronte (uguale per entrambi) -->
+  <div class="page front">
+    <span class="mark mark--tl"></span>
+    <span class="mark mark--br"></span>
+    <div>
+      <div class="name">Bespoke</div>
+      <div class="sub">STUDIO · MILANO</div>
+      <svg class="stitch" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M2 6 Q 25 2, 50 6 T 98 5"/><circle cx="3" cy="6" r="2.6"/></svg>
+    </div>
+  </div>
+
+  <!-- Pagina 2: retro Kristian -->
+  <div class="page back">
+    <span class="seam"></span>
+    <div class="who">
+      <div class="nome">Kristian Cimo</div>
+      <div class="ruolo">CO-FOUNDER &amp; DEVELOPER</div>
+    </div>
+    <div class="dati">
+      <strong>+39 389 621 4452</strong><br>
+      kristiancimo@gmail.com<br>
+      rotenzark.github.io/bespoke-studio
+    </div>
+    <span class="brand">Bespoke</span>
+  </div>
+
+  <!-- Pagina 3: fronte (copia per il secondo biglietto) -->
+  <div class="page front">
+    <span class="mark mark--tl"></span>
+    <span class="mark mark--br"></span>
+    <div>
+      <div class="name">Bespoke</div>
+      <div class="sub">STUDIO · MILANO</div>
+      <svg class="stitch" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M2 6 Q 25 2, 50 6 T 98 5"/><circle cx="3" cy="6" r="2.6"/></svg>
+    </div>
+  </div>
+
+  <!-- Pagina 4: retro Stephane -->
+  <div class="page back">
+    <span class="seam"></span>
+    <div class="who">
+      <div class="nome">Stephane Boka</div>
+      <div class="ruolo">CO-FOUNDER &amp; SALES</div>
+    </div>
+    <div class="dati">
+      <strong>+39 389 621 4452</strong><br>
+      kristiancimo@gmail.com<br>
+      rotenzark.github.io/bespoke-studio
+    </div>
+    <span class="brand">Bespoke</span>
+  </div>
+
+</body>
+</html>
