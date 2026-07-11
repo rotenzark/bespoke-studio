@@ -14,12 +14,17 @@ Sito one-page dell'agenzia **Bespoke Studio** (Kristian Cimo & Stephane Boka): s
 ## Struttura
 
 ```
-index.html          pagina unica
+index.html          home
+lavori.html         il campionario (tutti i progetti, filtri per taglio)
 css/style.css       stili (design token in :root)
-js/main.js          i18n, reveal, menu, form → WhatsApp
+js/main.js          i18n, reveal, menu, filo scroll-linked, filtri, form → WhatsApp
 assets/img/         screenshot case study, og-image, favicon
 biglietto/          biglietto da visita 85×55mm (sorgente HTML + PDF di stampa)
 ```
+
+Per aggiungere un progetto al campionario: screenshot 1440×900 in `assets/img/`,
+una card in `lavori.html` (griglia `.progetti`, `data-cat` = vetrina|business|alta)
+e le chiavi `camp.*` nel dizionario `I18N` di `js/main.js`.
 
 ## Aggiornare il sito
 

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il campionario — I lavori di Bespoke Studio · Milano</title>
+  <meta name="description" content="Il campionario di Bespoke Studio: i siti web che abbiamo cucito su misura, dal sito vetrina all'alta misura. Ogni lavoro è un pezzo unico.">
+  <meta property="og:title" content="Il campionario — I lavori di Bespoke Studio">
+  <meta property="og:description" content="I siti web che abbiamo cucito su misura, dal sito vetrina all'alta misura. Ogni lavoro è un pezzo unico.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rotenzark.github.io/bespoke-studio/lavori.html">
+  <meta property="og:image" content="https://rotenzark.github.io/bespoke-studio/assets/img/og-image.jpg">
+  <meta property="og:site_name" content="Bespoke Studio">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://rotenzark.github.io/bespoke-studio/lavori.html">
+  <meta name="theme-color" content="#141210">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..640;1,9..144,340..640&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=7">
+</head>
+<body data-page="lavori">
+
+  <a class="skip-link" href="#main" data-i18n="skip">Salta al contenuto</a>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="top">
+    <a class="nav__brand" href="index.html" aria-label="Bespoke Studio — home">
+      <span class="nav__brand-name">Bespoke</span>
+      <span class="nav__brand-sub">STUDIO · MILANO</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Sezioni del sito" data-i18n-attr="aria-label:a11y.navSections">
+      <a href="index.html#tagli" data-i18n="nav.services">I tagli</a>
+      <a href="lavori.html" class="is-current" aria-current="page" data-i18n="nav.work">Lavori</a>
+      <a href="index.html#metodo" data-i18n="nav.method">Metodo</a>
+      <a href="index.html#studio" data-i18n="nav.studio">Studio</a>
+      <a href="index.html#contatti" data-i18n="nav.contact">Contatti</a>
+    </nav>
+
+    <div class="nav__side">
+      <div class="lang" role="group" aria-label="Lingua / Language">
+        <button class="lang__btn is-active" data-lang="it" aria-pressed="true">IT</button>
+        <span class="lang__sep" aria-hidden="true">/</span>
+        <button class="lang__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn btn--primary nav__cta" href="index.html#contatti" data-i18n="nav.cta">Prendiamo le misure</a>
+      <button class="nav__burger" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="menu" id="mobile-menu" hidden>
+    <nav class="menu__links" aria-label="Menu">
+      <a href="index.html#tagli" data-i18n="nav.services">I tagli</a>
+      <a href="lavori.html" data-i18n="nav.work">Lavori</a>
+      <a href="index.html#metodo" data-i18n="nav.method">Metodo</a>
+      <a href="index.html#studio" data-i18n="nav.studio">Studio</a>
+      <a href="index.html#contatti" data-i18n="nav.contact">Contatti</a>
+    </nav>
+    <a class="btn btn--primary menu__cta" href="index.html#contatti" data-i18n="nav.cta">Prendiamo le misure</a>
+    <p class="menu__note mono" data-i18n="menu.note">CUCITO A MANO A MILANO</p>
+  </div>
+
+  <main id="main">
+
+    <!-- ===================== INTESTAZIONE ===================== -->
+    <section class="section page-head">
+      <p class="section__label mono reveal" data-i18n="camp.label">IL CAMPIONARIO</p>
+      <h1 class="section__title page-head__title reveal reveal-d1"><span data-i18n="camp.title1">Ogni lavoro,</span> <em data-i18n="camp.title2">un pezzo unico.</em></h1>
+      <p class="section__sub reveal reveal-d2" data-i18n="camp.sub">Come in ogni sartoria, i capi migliori finiscono nel campionario. Pochi lavori, seguiti bene — ognuno tagliato e cucito su una attività vera.</p>
+
+      <div class="chips reveal reveal-d3" role="group" aria-label="Filtra per taglio" data-i18n-attr="aria-label:camp.filter">
+        <button class="chip is-active" data-filter="tutti" aria-pressed="true" data-i18n="camp.f.all">Tutti</button>
+        <button class="chip" data-filter="vetrina" aria-pressed="false" data-i18n="camp.f.vetrina">Vetrina</button>
+        <button class="chip" data-filter="business" aria-pressed="false" data-i18n="camp.f.business">Business</button>
+        <button class="chip" data-filter="alta" aria-pressed="false" data-i18n="camp.f.alta">Alta misura</button>
+      </div>
+    </section>
+
+    <!-- ===================== IN EVIDENZA ===================== -->
+    <div class="seam" aria-hidden="true"><span class="seam__line"></span><span class="seam__knot"></span></div>
+
+    <section class="section featured-wrap">
+      <p class="section__label mono reveal" data-i18n="camp.featured">IN EVIDENZA</p>
+
+      <article class="featured progetto reveal reveal-d1" data-cat="vetrina">
+        <a class="featured__shot" href="https://rotenzark.github.io/pasticceria-mari/" target="_blank" rel="noopener" aria-label="Apri il sito della Pasticceria Marí in una nuova scheda" data-i18n-attr="aria-label:lavoro.open">
+          <span class="shot-bar" aria-hidden="true">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="shot-bar__url mono">pasticceria-mari</span>
+          </span>
+          <img src="assets/img/mari-desktop.jpg" alt="Homepage del sito Pasticceria Marí: interno del locale con tavolini e vetrine" data-i18n-attr="alt:lavoro.imgalt" width="1440" height="900" loading="lazy">
+        </a>
+        <div class="featured__info">
+          <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN</p>
+          <h2 class="featured__name">Pasticceria Marí</h2>
+          <p class="featured__desc" data-i18n="camp.mari.desc">Pasticceria artigianale in via Montegani, Milano. Sito vetrina bilingue con le foto vere del locale e richiesta torte via WhatsApp: la vetrina digitale all'altezza del banco.</p>
+          <ul class="featured__specs">
+            <li><span class="mono" data-i18n="lavoro.s1t">COMMESSA</span><span data-i18n="lavoro.s1d">Sito vetrina con richiesta torte via WhatsApp</span></li>
+            <li><span class="mono" data-i18n="lavoro.s2t">TESSUTO</span><span data-i18n="lavoro.s2d">HTML, CSS e JavaScript — nessun framework</span></li>
+            <li><span class="mono" data-i18n="lavoro.s4t">CONSEGNA</span><span data-i18n="lavoro.s4d">Online, con le foto vere del locale</span></li>
+          </ul>
+          <a class="btn btn--ghost featured__visit" href="https://rotenzark.github.io/pasticceria-mari/" target="_blank" rel="noopener" data-i18n="lavoro.visit">Visita il sito online</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===================== TUTTI I PROGETTI ===================== -->
+    <div class="seam" aria-hidden="true"><span class="seam__line"></span><span class="seam__knot"></span></div>
+
+    <section class="section">
+      <p class="section__label mono reveal" data-i18n="camp.all">TUTTI I PROGETTI</p>
+
+      <div class="progetti">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+          <a class="card-progetto__shot" href="https://rotenzark.github.io/pasticceria-mari/" target="_blank" rel="noopener" aria-label="Apri il sito della Pasticceria Marí in una nuova scheda" data-i18n-attr="aria-label:lavoro.open">
+            <span class="shot-bar" aria-hidden="true">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="shot-bar__url mono">pasticceria-mari</span>
+            </span>
+            <img src="assets/img/mari-desktop.jpg" alt="" width="1440" height="900" loading="lazy">
+          </a>
+          <div class="card-progetto__body">
+            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN</p>
+            <h3 class="card-progetto__name">Pasticceria Marí</h3>
+            <p class="card-progetto__desc" data-i18n="camp.mari.short">Vetrina bilingue per una pasticceria artigianale di Milano, con richiesta torte via WhatsApp.</p>
+            <a class="card-progetto__link" href="https://rotenzark.github.io/pasticceria-mari/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
+          </div>
+        </article>
+
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="alta">
+          <a class="card-progetto__shot" href="index.html" aria-label="Torna alla home di Bespoke Studio" data-i18n-attr="aria-label:camp.bespoke.open">
+            <span class="shot-bar" aria-hidden="true">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="shot-bar__url mono">bespoke-studio</span>
+            </span>
+            <img src="assets/img/bespoke-desktop.jpg" alt="" width="1440" height="900" loading="lazy">
+          </a>
+          <div class="card-progetto__body">
+            <p class="progetto__meta mono"><span data-i18n="camp.f.alta">Alta misura</span> · 2026 · IT/EN</p>
+            <h3 class="card-progetto__name">Bespoke Studio</h3>
+            <p class="card-progetto__desc" data-i18n="camp.bespoke.short">Il nostro atelier: intro ricamata lettera per lettera e un filo rosso che cuce la pagina mentre scorri. Il capo che indossiamo noi.</p>
+            <a class="card-progetto__link" href="index.html"><span data-i18n="camp.bespoke.visit">Guarda la home</span><span aria-hidden="true"> →</span></a>
+          </div>
+        </article>
+
+        <article class="progetto slot reveal reveal-d3" data-cat="sempre">
+          <div class="slot__inner">
+            <p class="progetto__meta mono" data-i18n="camp.slot.label">PROSSIMO PEZZO</p>
+            <h3 class="slot__name" data-i18n="camp.slot.name">Il tuo progetto</h3>
+            <p class="slot__desc" data-i18n="camp.slot.desc">Questo posto nel campionario è libero. Raccontaci la tua attività: prendiamo le misure senza impegno.</p>
+            <a class="btn btn--primary slot__cta" href="index.html#contatti" data-i18n="nav.cta">Prendiamo le misure</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="camp-note mono reveal" data-i18n="camp.note">POCHI PROGETTI ALLA VOLTA, SEGUITI BENE — IL CAMPIONARIO CRESCE PIANO, APPOSTA</p>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="seam seam--footer" aria-hidden="true"><span class="seam__line"></span><span class="seam__knot"></span></div>
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <p class="footer__name">Bespoke</p>
+        <p class="footer__sub mono" data-i18n="footer.tag">CUCITO A MANO A MILANO</p>
+      </div>
+      <nav class="footer__links" aria-label="Sezioni del sito (footer)" data-i18n-attr="aria-label:a11y.navSectionsFooter">
+        <a href="index.html#tagli" data-i18n="nav.services">I tagli</a>
+        <a href="lavori.html" data-i18n="nav.work">Lavori</a>
+        <a href="index.html#metodo" data-i18n="nav.method">Metodo</a>
+        <a href="index.html#studio" data-i18n="nav.studio">Studio</a>
+        <a href="index.html#contatti" data-i18n="nav.contact">Contatti</a>
+      </nav>
+      <p class="footer__legal mono">© <span id="year">2026</span> BESPOKE STUDIO — <span data-i18n="footer.legal">TUTTI I DIRITTI RISERVATI</span></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=6"></script>
+</body>
+</html>

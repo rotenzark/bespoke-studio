@@ -138,17 +138,56 @@
     'a11y.navSections':       { it: 'Sezioni del sito', en: 'Site sections' },
     'a11y.navSectionsFooter': { it: 'Sezioni del sito (footer)', en: 'Site sections (footer)' },
     'a11y.menuOpen':          { it: 'Apri il menu', en: 'Open the menu' },
-    'a11y.menuClose':         { it: 'Chiudi il menu', en: 'Close the menu' }
+    'a11y.menuClose':         { it: 'Chiudi il menu', en: 'Close the menu' },
+
+    'lavoro.all':        { it: 'Sfoglia il campionario', en: 'Browse the sample book' },
+
+    'camp.label':        { it: 'IL CAMPIONARIO', en: 'THE SAMPLE BOOK' },
+    'camp.title1':       { it: 'Ogni lavoro,', en: 'Every job,' },
+    'camp.title2':       { it: 'un pezzo unico.', en: 'a one-off piece.' },
+    'camp.sub':          { it: 'Come in ogni sartoria, i capi migliori finiscono nel campionario. Pochi lavori, seguiti bene — ognuno tagliato e cucito su una attività vera.', en: 'As in every tailor shop, the best garments end up in the sample book. A few projects, looked after properly — each one cut and sewn around a real business.' },
+    'camp.filter':       { it: 'Filtra per taglio', en: 'Filter by cut' },
+    'camp.f.all':        { it: 'Tutti', en: 'All' },
+    'camp.f.vetrina':    { it: 'Vetrina', en: 'Storefront' },
+    'camp.f.business':   { it: 'Business', en: 'Business' },
+    'camp.f.alta':       { it: 'Alta misura', en: 'Full bespoke' },
+    'camp.featured':     { it: 'IN EVIDENZA', en: 'FEATURED' },
+    'camp.all':          { it: 'TUTTI I PROGETTI', en: 'ALL PROJECTS' },
+    'camp.visit':        { it: 'Visita il sito', en: 'Visit the site' },
+    'camp.mari.desc':    { it: 'Pasticceria artigianale in via Montegani, Milano. Sito vetrina bilingue con le foto vere del locale e richiesta torte via WhatsApp: la vetrina digitale all’altezza del banco.', en: 'An artisan pastry shop in via Montegani, Milan. A bilingual showcase website with real photos of the shop and cake requests via WhatsApp: a digital shop window as good as the counter.' },
+    'camp.mari.short':   { it: 'Vetrina bilingue per una pasticceria artigianale di Milano, con richiesta torte via WhatsApp.', en: 'A bilingual showcase for an artisan pastry shop in Milan, with cake requests via WhatsApp.' },
+    'camp.bespoke.short':{ it: 'Il nostro atelier: intro ricamata lettera per lettera e un filo rosso che cuce la pagina mentre scorri. Il capo che indossiamo noi.', en: 'Our own atelier: an intro embroidered letter by letter and a red thread that stitches the page as you scroll. The suit we wear ourselves.' },
+    'camp.bespoke.visit':{ it: 'Guarda la home', en: 'See the home page' },
+    'camp.bespoke.open': { it: 'Torna alla home di Bespoke Studio', en: 'Back to the Bespoke Studio home page' },
+    'camp.slot.label':   { it: 'PROSSIMO PEZZO', en: 'NEXT PIECE' },
+    'camp.slot.name':    { it: 'Il tuo progetto', en: 'Your project' },
+    'camp.slot.desc':    { it: 'Questo posto nel campionario è libero. Raccontaci la tua attività: prendiamo le misure senza impegno.', en: 'This spot in the sample book is free. Tell us about your business: a fitting costs nothing.' },
+    'camp.note':         { it: 'POCHI PROGETTI ALLA VOLTA, SEGUITI BENE — IL CAMPIONARIO CRESCE PIANO, APPOSTA', en: 'A FEW PROJECTS AT A TIME, LOOKED AFTER PROPERLY — THE SAMPLE BOOK GROWS SLOWLY, ON PURPOSE' }
   };
 
+  // titolo e description dipendono dalla pagina (data-page sul body)
+  var PAGE = document.body.getAttribute('data-page') || 'home';
+
   var META = {
-    title: {
-      it: 'Bespoke Studio — Siti web su misura · Milano',
-      en: 'Bespoke Studio — Tailor-made websites · Milan'
+    home: {
+      title: {
+        it: 'Bespoke Studio — Siti web su misura · Milano',
+        en: 'Bespoke Studio — Tailor-made websites · Milan'
+      },
+      description: {
+        it: 'Bespoke Studio è una sartoria digitale a Milano: siti web disegnati e sviluppati a mano, su misura per attività locali, aziende e brand. Nessun template.',
+        en: 'Bespoke Studio is a digital tailor shop in Milan: websites designed and built by hand, made to measure for local businesses, companies and brands. No templates.'
+      }
     },
-    description: {
-      it: 'Bespoke Studio è una sartoria digitale a Milano: siti web disegnati e sviluppati a mano, su misura per attività locali, aziende e brand. Nessun template.',
-      en: 'Bespoke Studio is a digital tailor shop in Milan: websites designed and built by hand, made to measure for local businesses, companies and brands. No templates.'
+    lavori: {
+      title: {
+        it: 'Il campionario — I lavori di Bespoke Studio · Milano',
+        en: 'The sample book — Bespoke Studio’s work · Milan'
+      },
+      description: {
+        it: 'Il campionario di Bespoke Studio: i siti web che abbiamo cucito su misura, dal sito vetrina all’alta misura. Ogni lavoro è un pezzo unico.',
+        en: 'The Bespoke Studio sample book: the websites we have tailored, from showcase sites to full bespoke. Every job is a one-off piece.'
+      }
     }
   };
 
@@ -175,9 +214,10 @@
       if (entry && entry[lang] !== undefined) el.setAttribute(parts[0], entry[lang]);
     });
 
-    document.title = META.title[lang];
+    var meta = META[PAGE] || META.home;
+    document.title = meta.title[lang];
     var desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute('content', META.description[lang]);
+    if (desc) desc.setAttribute('content', meta.description[lang]);
 
     document.querySelectorAll('.lang__btn').forEach(function (btn) {
       var active = btn.getAttribute('data-lang') === lang;
@@ -346,7 +386,14 @@
       svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
       svg.setAttribute('preserveAspectRatio', 'none');
 
-      var pts = POINTS.map(function (p) { return [p[0] * W, p[1] * H]; });
+      // su pagine corte meno curve: un'ansa ogni ~560px di altezza,
+      // campionando i punti del percorso per mantenerne la forma
+      var count = Math.max(4, Math.min(POINTS.length, Math.round(H / 560) + 2));
+      var pts = [];
+      for (var i = 0; i < count; i++) {
+        var src = POINTS[Math.round(i * (POINTS.length - 1) / (count - 1))];
+        pts.push([src[0] * W, src[1] * H]);
+      }
       var d = smoothPath(pts);
 
       var maskId = 'thread-stitches';
@@ -612,6 +659,30 @@
 
       var url = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(text);
       window.open(url, '_blank', 'noopener');
+    });
+  }
+
+  /* ----------------------------------------------------------
+     Campionario: filtro dei progetti per taglio
+     ---------------------------------------------------------- */
+  var chips = document.querySelectorAll('.chip');
+  if (chips.length) {
+    var progetti = document.querySelectorAll('.progetti .progetto');
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        chips.forEach(function (c) {
+          var active = c === chip;
+          c.classList.toggle('is-active', active);
+          c.setAttribute('aria-pressed', String(active));
+        });
+        var f = chip.getAttribute('data-filter');
+        progetti.forEach(function (el) {
+          var cat = el.getAttribute('data-cat');
+          // lo slot "il tuo progetto" (data-cat="sempre") resta sempre visibile
+          var show = f === 'tutti' || cat === f || cat === 'sempre';
+          el.classList.toggle('is-hidden', !show);
+        });
+      });
     });
   }
 
