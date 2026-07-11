@@ -238,6 +238,154 @@
   }
 
   /* ----------------------------------------------------------
+     Il filo: la cucitura che attraversa la pagina e si riempie
+     con lo scroll (maschera a trattini + tracciato che si disegna)
+     ---------------------------------------------------------- */
+  (function () {
+    if (!document.createElementNS) return;
+
+    var NS = 'http://www.w3.org/2000/svg';
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var HEAD_START = 0.06; // quota di filo già cucita quando la pagina è in cima
+
+    // il percorso del filo: frazioni di larghezza/altezza pagina
+    var POINTS = [
+      [0.74, 0.008], [0.60, 0.045], [0.78, 0.090], [0.50, 0.145],
+      [0.20, 0.200], [0.78, 0.270], [0.30, 0.345], [0.70, 0.420],
+      [0.24, 0.500], [0.76, 0.575], [0.28, 0.655], [0.72, 0.735],
+      [0.36, 0.815], [0.62, 0.890], [0.48, 0.965]
+    ];
+
+    // Catmull-Rom → Bézier: curva morbida che passa per tutti i punti
+    function smoothPath(pts) {
+      var d = 'M ' + pts[0][0].toFixed(1) + ' ' + pts[0][1].toFixed(1);
+      for (var i = 0; i < pts.length - 1; i++) {
+        var p0 = pts[Math.max(0, i - 1)];
+        var p1 = pts[i];
+        var p2 = pts[i + 1];
+        var p3 = pts[Math.min(pts.length - 1, i + 2)];
+        d += ' C ' + (p1[0] + (p2[0] - p0[0]) / 6).toFixed(1) + ' ' + (p1[1] + (p2[1] - p0[1]) / 6).toFixed(1) +
+             ', ' + (p2[0] - (p3[0] - p1[0]) / 6).toFixed(1) + ' ' + (p2[1] - (p3[1] - p1[1]) / 6).toFixed(1) +
+             ', ' + p2[0].toFixed(1) + ' ' + p2[1].toFixed(1);
+      }
+      return d;
+    }
+
+    var wrap = null;
+    var revealPath = null;
+    var threadLen = 0;
+    var builtH = 0;
+
+    function update() {
+      if (!revealPath) return;
+      var max = document.body.scrollHeight - window.innerHeight;
+      var p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 1;
+      var visible = (HEAD_START + (1 - HEAD_START) * p) * threadLen;
+      revealPath.style.strokeDashoffset = String(threadLen - visible);
+    }
+
+    function build() {
+      var W = document.documentElement.clientWidth;
+      var H = document.body.scrollHeight;
+      if (!W || !H) return;
+      builtH = H;
+
+      if (wrap && wrap.parentNode) wrap.parentNode.removeChild(wrap);
+
+      wrap = document.createElement('div');
+      wrap.className = 'thread-bg';
+      wrap.setAttribute('aria-hidden', 'true');
+      wrap.style.height = H + 'px';
+
+      var svg = document.createElementNS(NS, 'svg');
+      svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+      svg.setAttribute('preserveAspectRatio', 'none');
+
+      var pts = POINTS.map(function (p) { return [p[0] * W, p[1] * H]; });
+      var d = smoothPath(pts);
+
+      var maskId = 'thread-stitches';
+      var defs = document.createElementNS(NS, 'defs');
+      var mask = document.createElementNS(NS, 'mask');
+      mask.setAttribute('id', maskId);
+      mask.setAttribute('maskUnits', 'userSpaceOnUse');
+      mask.setAttribute('x', '0'); mask.setAttribute('y', '0');
+      mask.setAttribute('width', String(W)); mask.setAttribute('height', String(H));
+
+      // i trattini della cucitura: visibili solo dove il filo è già passato
+      var stitches = document.createElementNS(NS, 'path');
+      stitches.setAttribute('d', d);
+      stitches.setAttribute('fill', 'none');
+      stitches.setAttribute('stroke', '#fff');
+      stitches.setAttribute('stroke-width', '6');
+      stitches.setAttribute('stroke-dasharray', '30 22');
+      stitches.setAttribute('stroke-linecap', 'round');
+      mask.appendChild(stitches);
+      defs.appendChild(mask);
+      svg.appendChild(defs);
+
+      revealPath = document.createElementNS(NS, 'path');
+      revealPath.setAttribute('class', 'thread-reveal');
+      revealPath.setAttribute('d', d);
+      revealPath.setAttribute('fill', 'none');
+      revealPath.setAttribute('stroke-width', '5');
+      revealPath.setAttribute('stroke-linecap', 'round');
+      revealPath.setAttribute('mask', 'url(#' + maskId + ')');
+      revealPath.style.stroke = 'var(--thread-vivid)';
+      revealPath.style.opacity = '0.9';
+      svg.appendChild(revealPath);
+
+      wrap.appendChild(svg);
+      document.body.insertBefore(wrap, document.body.firstChild);
+
+      threadLen = revealPath.getTotalLength();
+      revealPath.style.strokeDasharray = threadLen + ' ' + threadLen;
+
+      if (reduce) {
+        revealPath.style.strokeDashoffset = '0'; // già tutto cucito, niente motion
+      } else {
+        revealPath.style.strokeDashoffset = String(threadLen);
+        update();
+      }
+    }
+
+    build();
+    window.addEventListener('load', function () {
+      if (Math.abs(document.body.scrollHeight - builtH) > 80) build();
+      update();
+    });
+
+    if (!reduce) {
+      var ticking = false;
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          ticking = true;
+          requestAnimationFrame(function () { ticking = false; update(); });
+        }
+      }, { passive: true });
+    }
+
+    var resizeTimer = null;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        if (document.documentElement.clientWidth && Math.abs(document.body.scrollHeight - builtH) > 0) build();
+        else update();
+      }, 250);
+    });
+
+    if (window.ResizeObserver) {
+      var roTimer = null;
+      new ResizeObserver(function () {
+        clearTimeout(roTimer);
+        roTimer = setTimeout(function () {
+          if (Math.abs(document.body.scrollHeight - builtH) > 80) build();
+        }, 250);
+      }).observe(document.body);
+    }
+  })();
+
+  /* ----------------------------------------------------------
      Intro: il filo ricama "Bespoke" lettera per lettera
      ---------------------------------------------------------- */
   (function () {
