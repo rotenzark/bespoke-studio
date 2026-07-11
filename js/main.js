@@ -17,6 +17,7 @@
   var I18N = {
     'skip':              { it: 'Salta al contenuto', en: 'Skip to content' },
 
+    'nav.home':          { it: 'Home', en: 'Home' },
     'nav.services':      { it: 'I tagli', en: 'The cuts' },
     'nav.work':          { it: 'Lavori', en: 'Work' },
     'nav.method':        { it: 'Metodo', en: 'Method' },
