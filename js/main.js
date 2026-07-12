@@ -174,7 +174,7 @@
     'camp.latteneve.open':  { it: 'Apri il sito di LatteNeve in una nuova scheda', en: 'Open the LatteNeve website in a new tab' },
     'camp.tramtram.short':  { it: 'Trattoria romana a Porta Venezia: la livrea del tram milanese diventa il sito, con le sezioni come fermate e il menù dei classici.', en: 'A Roman trattoria in Porta Venezia: the Milanese tram livery becomes the site, with sections as stops and a menu of the classics.' },
     'camp.tramtram.open':   { it: 'Apri il sito di Tram Tram in una nuova scheda', en: 'Open the Tram Tram website in a new tab' },
-    'camp.dischivolanti.short': { it: "Negozio di dischi sui Navigli: il 45 giri che gira nell'hero, le sezioni come tracklist Lato A/B e l'arancio della loro vetrina.", en: 'A Navigli record shop: a spinning 45 in the hero, sections as an A/B-side tracklist, and the orange of their real shop window.' },
+    'camp.dischivolanti.short': { it: "Negozio di dischi sui Navigli: il 45 giri nell'hero si suona davvero — si gratta col mouse, con tanto di inerzia — tra tracklist Lato A/B e l'arancio della loro vetrina.", en: 'A Navigli record shop: the 45 in the hero actually plays — scratch it with your mouse, inertia included — amid A/B-side tracklists and the orange of their shop window.' },
     'camp.dischivolanti.open':  { it: 'Apri il sito di Dischivolanti in una nuova scheda', en: 'Open the Dischivolanti website in a new tab' },
     'camp.slot.label':   { it: 'PROSSIMO PEZZO', en: 'NEXT PIECE' },
     'camp.slot.name':    { it: 'Il tuo progetto', en: 'Your project' },
