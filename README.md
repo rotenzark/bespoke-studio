@@ -1,6 +1,6 @@
 # Bespoke Studio — sito vetrina
 
-Sito one-page dell'agenzia **Bespoke Studio** (Kristian Cimo & Stephane Boka): sartoria digitale a Milano, siti web su misura.
+Sito one-page dell'agenzia **Bespoke Studio** (Kristian Cimò & Stephane Boka): sartoria digitale a Milano, siti web su misura.
 
 **Online:** https://bespokestud.io (il vecchio URL rotenzark.github.io/bespoke-studio reindirizza)
 

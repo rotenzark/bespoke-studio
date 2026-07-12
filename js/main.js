@@ -105,9 +105,9 @@
     'studio.label':      { it: 'PEZZO 05 — GLI ARTIGIANI', en: 'PIECE 05 — THE ARTISANS' },
     'studio.title1':     { it: 'Quattro mani,', en: 'Four hands,' },
     'studio.title2':     { it: 'un solo filo.', en: 'a single thread.' },
-    'studio.p1.role':    { it: 'CO-FOUNDER & DEVELOPER', en: 'CO-FOUNDER & DEVELOPER' },
+    'studio.p1.role':    { it: 'FOUNDER & DEVELOPER', en: 'FOUNDER & DEVELOPER' },
     'studio.p1.bio':     { it: 'Scrive il codice come si taglia un tessuto pregiato: senza sprechi. Suo ogni pixel, ogni animazione, ogni millisecondo di caricamento.', en: 'He writes code the way fine fabric is cut: nothing wasted. Every pixel, every animation, every millisecond of loading time is his.' },
-    'studio.p2.role':    { it: 'CO-FOUNDER & SALES', en: 'CO-FOUNDER & SALES' },
+    'studio.p2.role':    { it: 'SALES', en: 'SALES' },
     'studio.p2.bio':     { it: 'Prende le misure: ascolta, traduce i bisogni in soluzioni e promette solo quello che poi consegniamo. Il primo caffè lo offre lui.', en: 'He takes the measurements: he listens, turns needs into solutions and only promises what we then deliver. First coffee is on him.' },
 
     'contatti.label':    { it: 'PEZZO 06 — LE MISURE', en: 'PIECE 06 — THE FITTING' },
