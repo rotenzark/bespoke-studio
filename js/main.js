@@ -379,7 +379,17 @@
       revealPath.setAttribute('stroke-dashoffset', (-curTail).toFixed(1));
     }
 
-    function tick() {
+    // Easing sul tempo reale, non sui frame: la velocità del filo è la
+    // stessa su ogni dispositivo — se il telefono perde frame, il passo
+    // successivo compensa recuperando di più. Su touch (pointer coarse)
+    // il filo insegue più svelto: meno frame animati = meno paint = meno jank.
+    var TAU = (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) ? 70 : 110;
+    var lastT = 0;
+
+    function tick(now) {
+      var dtMs = lastT ? Math.min(100, now - lastT) : 16;
+      lastT = now;
+      var k = 1 - Math.exp(-dtMs / TAU);
       var dh = tgtHead - curHead;
       var dt = tgtTail - curTail;
       if (Math.abs(dh) < 0.5 && Math.abs(dt) < 0.5) {
@@ -389,8 +399,8 @@
         animating = false;
         return;
       }
-      curHead += dh * 0.16;
-      curTail += dt * 0.16;
+      curHead += dh * k;
+      curTail += dt * k;
       applySegment();
       requestAnimationFrame(tick);
     }
@@ -400,6 +410,7 @@
       computeTargets();
       if (!animating) {
         animating = true;
+        lastT = 0;
         requestAnimationFrame(tick);
       }
     }
