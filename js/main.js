@@ -176,6 +176,8 @@
     'camp.tramtram.open':   { it: 'Apri il sito di Tram Tram in una nuova scheda', en: 'Open the Tram Tram website in a new tab' },
     'camp.dischivolanti.short': { it: "Negozio di dischi sui Navigli: il 45 giri nell'hero si suona davvero — si gratta col mouse, con tanto di inerzia — tra tracklist Lato A/B e l'arancio della loro vetrina.", en: 'A Navigli record shop: the 45 in the hero actually plays — scratch it with your mouse, inertia included — amid A/B-side tracklists and the orange of their shop window.' },
     'camp.dischivolanti.open':  { it: 'Apri il sito di Dischivolanti in una nuova scheda', en: 'Open the Dischivolanti website in a new tab' },
+    'camp.astragalo.short': { it: "Un erbario navigabile per la bottega dell'Isola: tavole botaniche disegnate a mano, registro laterale con numeri romani e un'intro in cui la pianta germoglia sullo schermo.", en: 'A browsable herbarium for the Isola shop: hand-drawn botanical plates, a side register with Roman numerals, and an intro where the plant sprouts across the screen.' },
+    'camp.astragalo.open':  { it: "Apri il sito dell'Erboristeria Astragalo in una nuova scheda", en: 'Open the Erboristeria Astragalo website in a new tab' },
     'camp.slot.label':   { it: 'PROSSIMO PEZZO', en: 'NEXT PIECE' },
     'camp.slot.name':    { it: 'Il tuo progetto', en: 'Your project' },
     'camp.slot.desc':    { it: 'Questo posto nel campionario è libero. Raccontaci la tua attività: prendiamo le misure senza impegno.', en: 'This spot in the sample book is free. Tell us about your business: a fitting costs nothing.' },
