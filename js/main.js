@@ -8,7 +8,7 @@
 
   var CONFIG = {
     whatsapp: '393896214452',
-    email: 'kristiancimo@gmail.com'
+    email: 'info@bespokestud.io'
   };
 
   /* ----------------------------------------------------------
@@ -131,7 +131,7 @@
     'form.msg.opt':      { it: '(facoltative)', en: '(optional)' },
     'form.error':        { it: 'COMPILA NOME E ATTIVITÀ PER INVIARE', en: 'FILL IN NAME AND BUSINESS TO SEND' },
     'form.submit':       { it: 'Invia su WhatsApp', en: 'Send via WhatsApp' },
-    'form.alt':          { it: 'Preferisci scrivere con calma? <a href="mailto:' + 'kristiancimo@gmail.com' + '?subject=Richiesta%20preventivo%20sito%20web">Mandaci un\'email</a>.', en: 'Prefer to write at your own pace? <a href="mailto:' + 'kristiancimo@gmail.com' + '?subject=Website%20quote%20request">Send us an email</a>.' },
+    'form.alt':          { it: 'Preferisci scrivere con calma? <a href="mailto:' + 'info@bespokestud.io' + '?subject=Richiesta%20preventivo%20sito%20web">Mandaci un\'email</a>.', en: 'Prefer to write at your own pace? <a href="mailto:' + 'info@bespokestud.io' + '?subject=Website%20quote%20request">Send us an email</a>.' },
 
     'footer.tag':        { it: 'CUCITO A MANO A MILANO', en: 'HAND-STITCHED IN MILAN' },
     'footer.legal':      { it: 'TUTTI I DIRITTI RISERVATI', en: 'ALL RIGHTS RESERVED' },
