@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..640;1,9..144,340..640&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root { --ink:#131110; --bone:#EFE9DD; --greige:#A9A094; --thread:#C4442E; }
+  body { width:1080px; height:1920px; background:var(--ink); font-family:"Archivo",sans-serif; color:var(--bone); overflow:hidden; position:relative; }
+  .mark { position:absolute; width:56px; height:56px; opacity:.45; }
+  .mark--tl { top:96px; left:96px; border-top:4px solid var(--bone); border-left:4px solid var(--bone); }
+  .mark--br { bottom:96px; right:96px; border-bottom:4px solid var(--bone); border-right:4px solid var(--bone); }
+  .wrap { position:absolute; inset:0; padding:220px 116px 220px; display:flex; flex-direction:column; }
+  .label { font-family:"IBM Plex Mono",monospace; font-size:27px; letter-spacing:.42em; color:var(--greige); }
+  h1 { font-family:"Fraunces",serif; font-style:italic; font-weight:600; font-size:96px; line-height:1.1; margin-top:64px; }
+  .world { margin-top:52px; font-family:"IBM Plex Mono",monospace; font-size:31px; line-height:1.9; letter-spacing:.22em; color:var(--thread); }
+  .stitch { margin:76px 0 68px; width:460px; height:30px; overflow:visible; display:block; }
+  .stitch path { stroke:var(--thread); stroke-width:5px; stroke-dasharray:20px 14px; stroke-linecap:round; fill:none; }
+  .stitch circle { fill:var(--thread); }
+  .steps { display:flex; flex-direction:column; gap:46px; }
+  .step { display:flex; align-items:baseline; gap:30px; }
+  .step .n { font-family:"IBM Plex Mono",monospace; color:var(--thread); font-size:31px; }
+  .step .t { font-size:47px; font-weight:500; }
+  .earn { margin-top:78px; font-family:"Fraunces",serif; font-style:italic; font-size:56px; color:var(--bone); }
+  .cta { margin-top:auto; }
+  .cta .mail { font-family:"IBM Plex Mono",monospace; font-size:42px; color:var(--bone); }
+  .cta .mail::before { content:""; display:inline-block; width:22px; height:22px; margin-right:22px; border-radius:50%; background:var(--thread); vertical-align:.12em; }
+  .cta .site { font-family:"IBM Plex Mono",monospace; font-size:30px; color:var(--greige); margin-top:20px; padding-left:44px; }
+  .brand { position:absolute; bottom:100px; right:116px; font-family:"Fraunces",serif; font-style:italic; font-weight:600; font-size:58px; color:var(--bone); }
+  .brand::after { content:""; display:inline-block; width:16px; height:16px; margin-left:11px; border-radius:50%; background:var(--thread); vertical-align:.45em; }
+</style>
+</head>
+<body>
+  <span class="mark mark--tl"></span>
+  <span class="mark mark--br"></span>
+  <div class="wrap">
+    <p class="label">BESPOKE STUDIO · MILANO</p>
+    <h1>Can you sell —<br>door-to-door<br>or over the phone?</h1>
+    <p class="world">LOOKING FOR SELLERS<br>ALL OVER THE WORLD</p>
+    <svg class="stitch" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M2 6 Q 25 2, 50 6 T 98 5"/><circle cx="3" cy="6" r="2.6"/></svg>
+    <div class="steps">
+      <div class="step"><span class="n">01</span><span class="t">Pick a business</span></div>
+      <div class="step"><span class="n">02</span><span class="t">We build the site</span></div>
+      <div class="step"><span class="n">03</span><span class="t">You pitch it</span></div>
+    </div>
+    <p class="earn">You earn on every sale.</p>
+    <div class="cta">
+      <p class="mail">info@bespokestud.io</p>
+      <p class="site">bespokestud.io</p>
+    </div>
+  </div>
+  <span class="brand">Bespoke</span>
+</body>
+</html>
