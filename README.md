@@ -2,7 +2,7 @@
 
 Sito one-page dell'agenzia **Bespoke Studio** (Kristian Cimo & Stephane Boka): sartoria digitale a Milano, siti web su misura.
 
-**Online:** https://rotenzark.github.io/bespoke-studio/
+**Online:** https://bespokestud.io (il vecchio URL rotenzark.github.io/bespoke-studio reindirizza)
 
 ## Stack
 
@@ -39,9 +39,13 @@ e le chiavi `camp.*` nel dizionario `I18N` di `js/main.js`.
 Per rigenerarli dopo una modifica a `biglietto.html`: stampare in PDF con Chrome
 (dimensioni pagina 91×61 mm, margini 0, grafica di sfondo attiva).
 
-## Da fare quando ci sarà il dominio
+## Dominio
 
-- [ ] Aggiornare `og:url` e `og:image` in `index.html`
-- [ ] Aggiungere file `CNAME` nel repo + DNS del registrar
-- [ ] Sostituire l'URL nel retro dei biglietti e rigenerare i PDF
+`bespokestud.io` — comprato su Cloudflare Registrar (luglio 2026). File `CNAME` nel repo;
+DNS su Cloudflare: 4 record A (apex → IP GitHub Pages) + CNAME `www` → `rotenzark.github.io`,
+tutti in modalità "DNS only" (proxy arancione disattivato, serve a GitHub per il certificato HTTPS).
+
+## Da fare
+
+- [ ] Rigenerare i PDF dei biglietti (l'URL sul retro ora è bespokestud.io)
 - [ ] Passare l'email a una casella sul dominio
