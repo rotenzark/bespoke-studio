@@ -710,4 +710,17 @@
      ---------------------------------------------------------- */
   var year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
+/* ---------- rete di sicurezza: se IntersectionObserver non parte, mostra tutto ---------- */
+  if ('IntersectionObserver' in window) {
+    var ioVivo = false;
+    var sentinella = new IntersectionObserver(function () { ioVivo = true; sentinella.disconnect(); });
+    sentinella.observe(document.body);
+    setTimeout(function () {
+      if (!ioVivo) {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in-view'); });
+      }
+    }, 1500);
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in-view'); });
+  }
 })();
