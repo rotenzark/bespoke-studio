@@ -79,6 +79,14 @@
   }
   .front .stitch path { stroke: var(--thread); stroke-width: 0.5mm; stroke-dasharray: 2mm 1.4mm; stroke-linecap: round; fill: none; }
   .front .stitch circle { fill: var(--thread); }
+  .front .tag {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 5.2pt;
+    letter-spacing: 0.34em;
+    color: var(--bone);
+    margin-top: 3.6mm;
+    text-indent: 0.34em;
+  }
 
   /* ------------------------- RETRO ------------------------- */
   .back {
@@ -116,9 +124,12 @@
     color: #3A342E;
   }
   .back .dati strong { font-weight: 500; color: var(--ink); }
-  .back .brand {
+  .back .brandblock {
     position: absolute;
-    bottom: 9mm; right: 10mm;
+    bottom: 8mm; right: 10mm;
+    text-align: right;
+  }
+  .back .brand {
     font-family: "Fraunces", serif;
     font-style: italic;
     font-weight: 600;
@@ -134,6 +145,14 @@
     background: var(--thread);
     vertical-align: 0.4em;
   }
+  .back .tagline {
+    display: block;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 5pt;
+    letter-spacing: 0.16em;
+    color: var(--greige);
+    margin-top: 1.3mm;
+  }
 </style>
 </head>
 <body>
@@ -146,6 +165,7 @@
       <div class="name">Bespoke</div>
       <div class="sub">STUDIO · MILANO</div>
       <svg class="stitch" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M2 6 Q 25 2, 50 6 T 98 5"/><circle cx="3" cy="6" r="2.6"/></svg>
+      <div class="tag">TAILOR-MADE WEBSITES</div>
     </div>
   </div>
 
@@ -161,7 +181,10 @@
       info@bespokestud.io<br>
       bespokestud.io
     </div>
-    <span class="brand">Bespoke</span>
+    <div class="brandblock">
+      <span class="brand">Bespoke</span>
+      <span class="tagline">siti web su misura</span>
+    </div>
   </div>
 
   <!-- Pagina 3: fronte (copia per il secondo biglietto) -->
@@ -172,6 +195,7 @@
       <div class="name">Bespoke</div>
       <div class="sub">STUDIO · MILANO</div>
       <svg class="stitch" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M2 6 Q 25 2, 50 6 T 98 5"/><circle cx="3" cy="6" r="2.6"/></svg>
+      <div class="tag">TAILOR-MADE WEBSITES</div>
     </div>
   </div>
 
@@ -187,7 +211,10 @@
       info@bespokestud.io<br>
       bespokestud.io
     </div>
-    <span class="brand">Bespoke</span>
+    <div class="brandblock">
+      <span class="brand">Bespoke</span>
+      <span class="tagline">siti web su misura</span>
+    </div>
   </div>
 
 </body>
