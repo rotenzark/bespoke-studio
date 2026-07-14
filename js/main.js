@@ -147,11 +147,55 @@
     'camp.title1':       { it: 'Ogni lavoro,', en: 'Every job,' },
     'camp.title2':       { it: 'un pezzo unico.', en: 'a one-off piece.' },
     'camp.sub':          { it: 'Come in ogni sartoria, i capi migliori finiscono nel campionario. Pochi lavori, seguiti bene — ognuno tagliato e cucito su una attività vera.', en: 'As in every tailor shop, the best garments end up in the sample book. A few projects, looked after properly — each one cut and sewn around a real business.' },
-    'camp.filter':       { it: 'Filtra per taglio', en: 'Filter by cut' },
+    'camp.filter':       { it: 'Filtra per settore', en: 'Filter by sector' },
     'camp.f.all':        { it: 'Tutti', en: 'All' },
     'camp.f.vetrina':    { it: 'Vetrina', en: 'Storefront' },
     'camp.f.business':   { it: 'Business', en: 'Business' },
     'camp.f.alta':       { it: 'Alta misura', en: 'Full bespoke' },
+    'cat.macro.beauty': { it: "Beauty & Benessere", en: "Beauty & wellness" },
+    'cat.macro.food': { it: "Ristoranti & Cucina", en: "Restaurants" },
+    'cat.macro.bar': { it: "Bar, Caffè & Vino", en: "Bar, café & wine" },
+    'cat.macro.dolci': { it: "Dolci, Gelato & Forno", en: "Sweets & bakery" },
+    'cat.macro.bottega': { it: "Gastronomia & Bottega", en: "Deli & food shops" },
+    'cat.macro.shop': { it: "Negozi & Moda", en: "Shops & fashion" },
+    'cat.macro.servizi': { it: "Servizi & Casa", en: "Services" },
+    'cat.m.parr': { it: "Parrucchiere", en: "Hair salon" },
+    'cat.m.barb': { it: "Barbiere", en: "Barber" },
+    'cat.m.nails': { it: "Nails", en: "Nails" },
+    'cat.m.estetica': { it: "Estetica & SPA", en: "Beauty & spa" },
+    'cat.m.hairbeauty': { it: "Parrucchiere & estetica", en: "Hair & beauty" },
+    'cat.m.trattoria': { it: "Trattoria", en: "Trattoria" },
+    'cat.m.ristorante': { it: "Ristorante", en: "Restaurant" },
+    'cat.m.osteria': { it: "Osteria", en: "Osteria" },
+    'cat.m.mondo': { it: "Cucina dal mondo", en: "World cuisine" },
+    'cat.m.bar': { it: "Bar", en: "Bar" },
+    'cat.m.pub': { it: "Pub", en: "Pub" },
+    'cat.m.caffetteria': { it: "Caffetteria", en: "Café" },
+    'cat.m.torref': { it: "Torrefazione", en: "Coffee roaster" },
+    'cat.m.enoteca': { it: "Enoteca", en: "Wine bar" },
+    'cat.m.pasticceria': { it: "Pasticceria", en: "Pastry shop" },
+    'cat.m.gelateria': { it: "Gelateria", en: "Gelato" },
+    'cat.m.forno': { it: "Forno", en: "Bakery" },
+    'cat.m.salumeria': { it: "Salumeria", en: "Deli" },
+    'cat.m.gastronomia': { it: "Gastronomia", en: "Deli & kitchen" },
+    'cat.m.pastafresca': { it: "Pasta fresca", en: "Fresh pasta" },
+    'cat.m.rosticceria': { it: "Rosticceria", en: "Rotisserie" },
+    'cat.m.alimentari': { it: "Alimentari & vini", en: "Fine foods & wine" },
+    'cat.m.vintage': { it: "Vintage & moda", en: "Vintage & fashion" },
+    'cat.m.calzature': { it: "Calzature", en: "Footwear" },
+    'cat.m.cappelli': { it: "Cappelleria", en: "Hat shop" },
+    'cat.m.dischi': { it: "Dischi", en: "Record shop" },
+    'cat.m.cartoleria': { it: "Cartoleria", en: "Stationery" },
+    'cat.m.belearti': { it: "Belle arti", en: "Art supplies" },
+    'cat.m.erboristeria': { it: "Erboristeria", en: "Herbalist" },
+    'cat.m.libreria': { it: "Libreria", en: "Bookshop" },
+    'cat.m.gioielleria': { it: "Gioielleria", en: "Jeweller" },
+    'cat.m.concept': { it: "Concept store", en: "Concept store" },
+    'cat.m.bici': { it: "Biciclette", en: "Bike shop" },
+    'cat.m.dentista': { it: "Studio dentistico", en: "Dental practice" },
+    'cat.m.ottica': { it: "Ottica", en: "Optician" },
+    'cat.m.ospitalita': { it: "Ospitalità", en: "Guest house" },
+    'cat.m.studio': { it: "Il nostro sito", en: "Our own site" },
     'camp.featured':     { it: 'IN EVIDENZA', en: 'FEATURED' },
     'camp.all':          { it: 'TUTTI I PROGETTI', en: 'ALL PROJECTS' },
     'camp.visit':        { it: 'Visita il sito', en: 'Visit the site' },
@@ -850,20 +894,29 @@
   var chips = document.querySelectorAll('.chip');
   if (chips.length) {
     var progetti = document.querySelectorAll('.progetti .progetto');
+    var active = [];
+    function applyFiltro() {
+      progetti.forEach(function (el) {
+        var toks = (el.getAttribute('data-cat') || '').split(/\s+/);
+        var show;
+        if (active.length === 0) show = true;
+        else if (toks.indexOf('sempre') !== -1) show = true;
+        else show = active.some(function (a) { return toks.indexOf(a) !== -1; });
+        el.classList.toggle('is-hidden', !show);
+      });
+    }
     chips.forEach(function (chip) {
       chip.addEventListener('click', function () {
-        chips.forEach(function (c) {
-          var active = c === chip;
-          c.classList.toggle('is-active', active);
-          c.setAttribute('aria-pressed', String(active));
-        });
         var f = chip.getAttribute('data-filter');
-        progetti.forEach(function (el) {
-          var cat = el.getAttribute('data-cat');
-          // lo slot "il tuo progetto" (data-cat="sempre") resta sempre visibile
-          var show = f === 'tutti' || cat === f || cat === 'sempre';
-          el.classList.toggle('is-hidden', !show);
+        if (f === 'tutti') { active = []; }
+        else { var i = active.indexOf(f); if (i === -1) active.push(f); else active.splice(i, 1); }
+        chips.forEach(function (c) {
+          var cf = c.getAttribute('data-filter');
+          var on = cf === 'tutti' ? active.length === 0 : active.indexOf(cf) !== -1;
+          c.classList.toggle('is-active', on);
+          c.setAttribute('aria-pressed', String(on));
         });
+        applyFiltro();
       });
     });
   }

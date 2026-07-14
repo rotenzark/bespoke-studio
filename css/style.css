@@ -1134,6 +1134,11 @@ a { color: inherit; }
   letter-spacing: 0.16em;
 }
 
+/* filtro per settore: contatore nel chip + micro-tag di categoria */
+.chip__count { opacity: 0.5; font-variant-numeric: tabular-nums; margin-inline-start: 0.3em; }
+.chip.is-active .chip__count { opacity: 0.85; }
+.progetto__meta .tag { color: var(--thread-hi); }
+
 .progetti {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

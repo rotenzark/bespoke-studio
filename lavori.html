@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..640;1,9..144,340..640&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/style.css?v=8">
 </head>
 <body data-page="lavori">
 
@@ -84,11 +84,15 @@
       <h1 class="section__title page-head__title reveal reveal-d1"><span data-i18n="camp.title1">Ogni lavoro,</span> <em data-i18n="camp.title2">un pezzo unico.</em></h1>
       <p class="section__sub reveal reveal-d2" data-i18n="camp.sub">Come in ogni sartoria, i capi migliori finiscono nel campionario. Pochi lavori, seguiti bene — ognuno tagliato e cucito su una attività vera.</p>
 
-      <div class="chips reveal reveal-d3" role="group" aria-label="Filtra per taglio" data-i18n-attr="aria-label:camp.filter">
-        <button class="chip is-active" data-filter="tutti" aria-pressed="true" data-i18n="camp.f.all">Tutti</button>
-        <button class="chip" data-filter="vetrina" aria-pressed="false" data-i18n="camp.f.vetrina">Vetrina</button>
-        <button class="chip" data-filter="business" aria-pressed="false" data-i18n="camp.f.business">Business</button>
-        <button class="chip" data-filter="alta" aria-pressed="false" data-i18n="camp.f.alta">Alta misura</button>
+      <div class="chips reveal reveal-d3" role="group" aria-label="Filtra per settore" data-i18n-attr="aria-label:camp.filter">
+        <button class="chip is-active" data-filter="tutti" aria-pressed="true"><span data-i18n="camp.f.all">Tutti</span></button>
+        <button class="chip" data-filter="beauty" aria-pressed="false"><span data-i18n="cat.macro.beauty">Beauty &amp; Benessere</span> <span class="chip__count">26</span></button>
+        <button class="chip" data-filter="food" aria-pressed="false"><span data-i18n="cat.macro.food">Ristoranti &amp; Cucina</span> <span class="chip__count">18</span></button>
+        <button class="chip" data-filter="bar" aria-pressed="false"><span data-i18n="cat.macro.bar">Bar, Caffè &amp; Vino</span> <span class="chip__count">8</span></button>
+        <button class="chip" data-filter="dolci" aria-pressed="false"><span data-i18n="cat.macro.dolci">Dolci, Gelato &amp; Forno</span> <span class="chip__count">8</span></button>
+        <button class="chip" data-filter="bottega" aria-pressed="false"><span data-i18n="cat.macro.bottega">Gastronomia &amp; Bottega</span> <span class="chip__count">5</span></button>
+        <button class="chip" data-filter="shop" aria-pressed="false"><span data-i18n="cat.macro.shop">Negozi &amp; Moda</span> <span class="chip__count">16</span></button>
+        <button class="chip" data-filter="servizi" aria-pressed="false"><span data-i18n="cat.macro.servizi">Servizi &amp; Casa</span> <span class="chip__count">5</span></button>
       </div>
     </section>
 
@@ -98,7 +102,7 @@
     <section class="section featured-wrap">
       <p class="section__label mono reveal" data-i18n="camp.featured">IN EVIDENZA</p>
 
-      <article class="featured progetto reveal reveal-d1" data-cat="vetrina">
+      <article class="featured progetto reveal reveal-d1" data-cat="dolci">
         <a class="featured__shot" href="https://rotenzark.github.io/pasticceria-mari/" target="_blank" rel="noopener" aria-label="Apri il sito della Pasticceria Marí in una nuova scheda" data-i18n-attr="aria-label:lavoro.open">
           <span class="shot-bar" aria-hidden="true">
             <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -107,7 +111,7 @@
           <img src="assets/img/mari-desktop.jpg" alt="Homepage del sito Pasticceria Marí: interno del locale con tavolini e vetrine" data-i18n-attr="alt:lavoro.imgalt" width="1440" height="900">
         </a>
         <div class="featured__info">
-          <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN</p>
+          <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.pasticceria">Pasticceria</span> · 2026 · IT/EN</p>
           <h2 class="featured__name">Pasticceria Marí</h2>
           <p class="featured__desc" data-i18n="camp.mari.desc">Pasticceria artigianale in via Montegani, Milano. Sito vetrina bilingue con le foto vere del locale e richiesta torte via WhatsApp: la vetrina digitale all'altezza del banco.</p>
           <ul class="featured__specs">
@@ -127,7 +131,7 @@
       <p class="section__label mono reveal" data-i18n="camp.all">TUTTI I PROGETTI</p>
 
       <div class="progetti">
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="dolci">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/pasticceria-mari/" target="_blank" rel="noopener" aria-label="Apri il sito della Pasticceria Marí in una nuova scheda" data-i18n-attr="aria-label:lavoro.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -136,14 +140,14 @@
             <img src="assets/img/mari-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.pasticceria">Pasticceria</span> · 2026 · IT/EN</p>
             <h3 class="card-progetto__name">Pasticceria Marí</h3>
             <p class="card-progetto__desc" data-i18n="camp.mari.short">Vetrina bilingue per una pasticceria artigianale di Milano, con richiesta torte via WhatsApp.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/pasticceria-mari/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/nailss/" target="_blank" rel="noopener" aria-label="Apri il sito di Nailss in una nuova scheda" data-i18n-attr="aria-label:camp.nailss.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -152,14 +156,14 @@
             <img src="assets/img/nailss-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.nails">Nails</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Nailss</h3>
             <p class="card-progetto__desc" data-i18n="camp.nailss.short">Vetrina per un nail studio di via Montegani con 4,8 stelle e oltre 1.600 recensioni: prenotazione su WhatsApp e galleria del salone.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/nailss/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d3" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d3" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/nail-studio-n2/" target="_blank" rel="noopener" aria-label="Apri il sito di Nail Studio N.2 in una nuova scheda" data-i18n-attr="aria-label:camp.n2.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -168,14 +172,14 @@
             <img src="assets/img/nail-studio-n2-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.nails">Nails</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Nail Studio N.2</h3>
             <p class="card-progetto__desc" data-i18n="camp.n2.short">Salone di manicure a Stadera: centinaia di smalti in parete, prenotazioni su Treatwell e una pagina chiara e luminosa come il locale.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/nail-studio-n2/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/jolie-nail-salon/" target="_blank" rel="noopener" aria-label="Apri il sito di Jolie Nail Salon in una nuova scheda" data-i18n-attr="aria-label:camp.jolie.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -184,14 +188,14 @@
             <img src="assets/img/jolie-nail-salon-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.nails">Nails</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Jolie Nail Salon</h3>
             <p class="card-progetto__desc" data-i18n="camp.jolie.short">Nail salon dall'anima elegante in via Montegani: manicure, pedicure e press-on personalizzate, con prenotazione online.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/jolie-nail-salon/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/crescente-parrucchiere/" target="_blank" rel="noopener" aria-label="Apri il sito di Crescente Parrucchiere in una nuova scheda" data-i18n-attr="aria-label:camp.crescente.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -200,14 +204,14 @@
             <img src="assets/img/crescente-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.parr">Parrucchiere</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Crescente Parrucchiere</h3>
             <p class="card-progetto__desc" data-i18n="camp.crescente.short">Barbiere storico dell'Isola, dal 1999 in via Borsieri: verde bottega, listino da registro e un'intro con le forbici che tagliano lo schermo.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/crescente-parrucchiere/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d3" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d3" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/del-monaco-hair-design/" target="_blank" rel="noopener" aria-label="Apri il sito di Del Monaco Hair Design in una nuova scheda" data-i18n-attr="aria-label:camp.delmonaco.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -216,14 +220,14 @@
             <img src="assets/img/del-monaco-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.parr">Parrucchiere</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Del Monaco Hair Design</h3>
             <p class="card-progetto__desc" data-i18n="camp.delmonaco.short">Salone con 4,9 su 542 recensioni in via Pastrengo: la cartella colori delle tinte diventa la grafica del sito, con le foto vere del salone.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/del-monaco-hair-design/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="dolci">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/latteneve/" target="_blank" rel="noopener" aria-label="Apri il sito di LatteNeve in una nuova scheda" data-i18n-attr="aria-label:camp.latteneve.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -232,14 +236,14 @@
             <img src="assets/img/latteneve-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.gelateria">Gelateria</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">LatteNeve</h3>
             <p class="card-progetto__desc" data-i18n="camp.latteneve.short">Gelateria tradizionale sul Naviglio, segnalata dal Gambero Rosso: la sua parete degli ingredienti diventa la firma grafica del sito.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/latteneve/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="food">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/tram-tram/" target="_blank" rel="noopener" aria-label="Apri il sito di Tram Tram in una nuova scheda" data-i18n-attr="aria-label:camp.tramtram.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -248,14 +252,14 @@
             <img src="assets/img/tram-tram-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.trattoria">Trattoria</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Tram Tram</h3>
             <p class="card-progetto__desc" data-i18n="camp.tramtram.short">Trattoria romana a Porta Venezia: la livrea del tram milanese diventa il sito, con le sezioni come fermate e il menù dei classici.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/tram-tram/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d3" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d3" data-cat="shop">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/dischivolanti/" target="_blank" rel="noopener" aria-label="Apri il sito di Dischivolanti in una nuova scheda" data-i18n-attr="aria-label:camp.dischivolanti.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -264,14 +268,14 @@
             <img src="assets/img/dischivolanti-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.dischi">Dischi</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Dischivolanti</h3>
             <p class="card-progetto__desc" data-i18n="camp.dischivolanti.short">Negozio di dischi sui Navigli: il 45 giri nell'hero si suona davvero — si gratta col mouse, con tanto di inerzia — tra tracklist Lato A/B e l'arancio della loro vetrina.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/dischivolanti/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="shop">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/erboristeria-astragalo/" target="_blank" rel="noopener" aria-label="Apri il sito dell'Erboristeria Astragalo in una nuova scheda" data-i18n-attr="aria-label:camp.astragalo.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -280,14 +284,14 @@
             <img src="assets/img/astragalo-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.erboristeria">Erboristeria</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Erboristeria Astragalo</h3>
             <p class="card-progetto__desc" data-i18n="camp.astragalo.short">Un erbario navigabile per la bottega dell'Isola: tavole botaniche disegnate a mano, registro laterale con numeri romani e un'intro in cui la pianta germoglia sullo schermo.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/erboristeria-astragalo/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d3" data-cat="business">
+        <article class="progetto card-progetto reveal reveal-d3" data-cat="servizi">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/castaldi-house/" target="_blank" rel="noopener" aria-label="Apri il sito di Castaldi House in una nuova scheda" data-i18n-attr="aria-label:camp.castaldi.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -296,14 +300,14 @@
             <img src="assets/img/castaldi-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.business">Business</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.ospitalita">Ospitalità</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Castaldi House</h3>
             <p class="card-progetto__desc" data-i18n="camp.castaldi.short">Guest house a Porta Venezia con prenotazione diretta: date, ospiti e camera compongono la richiesta WhatsApp — zero commissioni alle piattaforme.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/castaldi-house/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="food">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/warsa/" target="_blank" rel="noopener" aria-label="Apri il sito di Warsa in una nuova scheda" data-i18n-attr="aria-label:camp.warsa.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -312,14 +316,14 @@
             <img src="assets/img/warsa-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.mondo">Cucina dal mondo</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Warsa</h3>
             <p class="card-progetto__desc" data-i18n="camp.warsa.short">Ristorante eritreo storico a Porta Venezia: il mesob ad anelli intrecciati come firma, layout cerimoniale e intro a iride.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/warsa/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="food">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/osteria-alla-concorrenza/" target="_blank" rel="noopener" aria-label="Apri il sito dell'Osteria alla Concorrenza in una nuova scheda" data-i18n-attr="aria-label:camp.concorrenza.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -328,14 +332,14 @@
             <img src="assets/img/concorrenza-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.osteria">Osteria</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Osteria alla Concorrenza</h3>
             <p class="card-progetto__desc" data-i18n="camp.concorrenza.short">L'osteria di Diego Rossi (Trippa) a Porta Venezia: insegna d'epoca verde e oro, intro a saracinesca e il menù su una lavagna col gesso che si data da sola.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/osteria-alla-concorrenza/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d3" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d3" data-cat="servizi">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/tenedini-biciclette/" target="_blank" rel="noopener" aria-label="Apri il sito di Tenedini Biciclette in una nuova scheda" data-i18n-attr="aria-label:camp.tenedini.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -344,14 +348,14 @@
             <img src="assets/img/tenedini-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.bici">Biciclette</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Tenedini Biciclette</h3>
             <p class="card-progetto__desc" data-i18n="camp.tenedini.short">Officina storica di bici e scooter a Porta Venezia: targa smaltata come insegna, catalogo a tavole tecniche con le ruote che girano al passaggio e un'intro in cui la ruota rotola via.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/tenedini-biciclette/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/new-shampoo/" target="_blank" rel="noopener" aria-label="Apri il sito di New Shampoo in una nuova scheda" data-i18n-attr="aria-label:camp.newshampoo.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -360,14 +364,14 @@
             <img src="assets/img/new-shampoo-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.parr">Parrucchiere</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">New Shampoo</h3>
             <p class="card-progetto__desc" data-i18n="camp.newshampoo.short">Salone-galleria di Porta Venezia, 4,9 su 484 recensioni: listino e team reali, e un'intro in cui il nome emerge dallo specchio appannato.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/new-shampoo/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/amy-nail-spa/" target="_blank" rel="noopener" aria-label="Apri il sito di Amy Nail Spa in una nuova scheda" data-i18n-attr="aria-label:camp.amy.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -376,14 +380,14 @@
             <img src="assets/img/amy-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.nails">Nails</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Amy Nail Spa</h3>
             <p class="card-progetto__desc" data-i18n="camp.amy.short">Nail spa e centro estetico in via Melzo, aperto sette giorni su sette: l'insegna accesa apre la pagina, i servizi si leggono dalla vetrina e si prenota su WhatsApp.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/amy-nail-spa/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d3" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d3" data-cat="food">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/trattoria-ponte-rosso/" target="_blank" rel="noopener" aria-label="Apri il sito della Trattoria Ponte Rosso in una nuova scheda" data-i18n-attr="aria-label:camp.ponterosso.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -392,14 +396,14 @@
             <img src="assets/img/ponte-rosso-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.trattoria">Trattoria</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Trattoria Ponte Rosso</h3>
             <p class="card-progetto__desc" data-i18n="camp.ponterosso.short">Trattoria sul Naviglio Grande, 8,7 su TheFork: la «cucina della memoria» raccontata con le loro parole e il menù coi classici tra Milano, Roma e Napoli.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/trattoria-ponte-rosso/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="servizi">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/bike-republic/" target="_blank" rel="noopener" aria-label="Apri il sito di Bike Republic in una nuova scheda" data-i18n-attr="aria-label:camp.bikerepublic.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -408,14 +412,14 @@
             <img src="assets/img/bike-republic-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.bici">Biciclette</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Bike Republic</h3>
             <p class="card-progetto__desc" data-i18n="camp.bikerepublic.short">Negozio e officina di biciclette sul Naviglio Grande, dal 2012: un sito deciso nel loro stile, tra i mezzi in vendita, l'assistenza e la gallery #lifeinbikerepublic.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/bike-republic/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="bar">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/caffetteria-darsena/" target="_blank" rel="noopener" aria-label="Apri il sito della Caffetteria della Darsena in una nuova scheda" data-i18n-attr="aria-label:camp.darsena.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -424,14 +428,14 @@
             <img src="assets/img/darsena-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.caffetteria">Caffetteria</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Caffetteria della Darsena</h3>
             <p class="card-progetto__desc" data-i18n="camp.darsena.short">Bar-caffetteria di quartiere affacciato sulla Darsena: una firma grafica ispirata all'acqua del porto, dal caffè al ginseng alle scaloppine, con i servizi di zona (biglietti, tabacchi).</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/caffetteria-darsena/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="shop">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/sous-vintage/" target="_blank" rel="noopener" aria-label="Apri il sito di Sous Vintage Shop in una nuova scheda" data-i18n-attr="aria-label:camp.sous.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -440,14 +444,14 @@
             <img src="assets/img/sous-vintage-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.vintage">Vintage &amp; moda</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Sous Vintage Shop</h3>
             <p class="card-progetto__desc" data-i18n="camp.sous.short">Negozio di vintage e upcycling sui Navigli: la vera vetrina liberty fa da protagonista, con una firma a volute Art Nouveau e il catalogo su Etsy.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/sous-vintage/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d3" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d3" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/elisir-del-benessere/" target="_blank" rel="noopener" aria-label="Apri il sito di Elisir del Benessere in una nuova scheda" data-i18n-attr="aria-label:camp.elisir.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -456,14 +460,14 @@
             <img src="assets/img/elisir-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.estetica">Estetica &amp; SPA</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Elisir del Benessere</h3>
             <p class="card-progetto__desc" data-i18n="camp.elisir.short">Centro estetico sulla riva del Naviglio Grande: il concept «la goccia e il riflesso» dà al sito una firma d'acqua, tra listino, trattamenti e prenotazione diretta.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/elisir-del-benessere/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/calajo/" target="_blank" rel="noopener" aria-label="Apri il sito di Calajò Hair Stylist in una nuova scheda" data-i18n-attr="aria-label:camp.calajo.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -472,14 +476,14 @@
             <img src="assets/img/calajo-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.parr">Parrucchiere</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Calajò Hair Stylist</h3>
             <p class="card-progetto__desc" data-i18n="camp.calajo.short">Parrucchiere e lookmaker ai Navigli: un salone total white «in piena luce», con listino, consulenza d'immagine e prenotazione.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/calajo/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/estilo-parrucchieri/" target="_blank" rel="noopener" aria-label="Apri il sito di Estilò Parrucchieri in una nuova scheda" data-i18n-attr="aria-label:camp.estilo.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -488,14 +492,14 @@
             <img src="assets/img/estilo-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.parr">Parrucchiere</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Estilò Parrucchieri</h3>
             <p class="card-progetto__desc" data-i18n="camp.estilo.short">Salone dei Navigli dal 1998, il primo a fare la piega di sera: il concept «una giungla che si accende di sera» e persino una sezione sui suoi concerti e dj set.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/estilo-parrucchieri/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d3" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d3" data-cat="shop">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/salvatore-marie/" target="_blank" rel="noopener" aria-label="Apri il sito di Salvatore + Marie in una nuova scheda" data-i18n-attr="aria-label:camp.sm.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -504,14 +508,14 @@
             <img src="assets/img/salvatore-marie-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.concept">Concept store</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Salvatore + Marie</h3>
             <p class="card-progetto__desc" data-i18n="camp.sm.short">Concept store d'arte e design ai Navigli dal 1989: un sito da galleria contemporanea per un negozio di bijoux, moda e oggetti unici.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/salvatore-marie/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="food">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/manna/" target="_blank" rel="noopener" aria-label="Apri il sito di Manna in una nuova scheda" data-i18n-attr="aria-label:camp.manna.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -520,14 +524,14 @@
             <img src="assets/img/manna-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.ristorante">Ristorante</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Manna</h3>
             <p class="card-progetto__desc" data-i18n="camp.manna.short">Ristorante di cucina italiana creativa a NoLo, dello chef Matteo Fronduti segnalato dalla Michelin: menù, gallery dei piatti e prenotazione in una vetrina calda ed elegante.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/manna/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/nabils-barbershop/" target="_blank" rel="noopener" aria-label="Apri il sito di Nabil's Barbershop in una nuova scheda" data-i18n-attr="aria-label:camp.nabils.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -536,14 +540,14 @@
             <img src="assets/img/nabils-barbershop-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.barb">Barbiere</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Nabil's Barbershop</h3>
             <p class="card-progetto__desc" data-i18n="camp.nabils.short">Barber house urbana con cinque sedi a Milano, nata dalla passione di un ex calciatore e cresciuta fino a hammam, nail e spa: qui la cura di sé diventa un rituale.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/nabils-barbershop/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d3" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d3" data-cat="dolci">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/il-forno-di-lambrate/" target="_blank" rel="noopener" aria-label="Apri il sito di Il Forno di Lambrate in una nuova scheda" data-i18n-attr="aria-label:camp.forno.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -552,14 +556,14 @@
             <img src="assets/img/il-forno-di-lambrate-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.forno">Forno</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Il Forno di Lambrate</h3>
             <p class="card-progetto__desc" data-i18n="camp.forno.short">Forno di quartiere a Lambrate, premiato con i Tre Pani del Gambero Rosso: pane a lievitazione naturale, pizza e dolci in una vetrina che dà al lievito tutto il suo tempo.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/il-forno-di-lambrate/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="food">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/trattoria-da-abele/" target="_blank" rel="noopener" aria-label="Apri il sito di Trattoria da Abele in una nuova scheda" data-i18n-attr="aria-label:camp.abele.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -568,14 +572,14 @@
             <img src="assets/img/trattoria-da-abele-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.trattoria">Trattoria</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Trattoria da Abele</h3>
             <p class="card-progetto__desc" data-i18n="camp.abele.short">Trattoria storica di NoLo dal 1979, in una vecchia bocciofila con l'arredo anni '50 intatto: la Milano dei risotti, col menù del giorno scritto sulla lavagna.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/trattoria-da-abele/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="servizi">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/studio-nesler-bett/" target="_blank" rel="noopener" aria-label="Apri il sito dello Studio Dentistico Nesler Bett in una nuova scheda" data-i18n-attr="aria-label:camp.nesler.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -584,14 +588,14 @@
             <img src="assets/img/studio-nesler-bett-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.dentista">Studio dentistico</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Studio Dentistico Nesler Bett</h3>
             <p class="card-progetto__desc" data-i18n="camp.nesler.short">Studio dentistico a NoLo, dei dottori Nesler e Bett: una vetrina pulita e rassicurante, «il tuo sorriso in mani esperte», con tutte le informazioni chiare a colpo d'occhio.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/studio-nesler-bett/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d3" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d3" data-cat="bar">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/ghe-pensi-mi/" target="_blank" rel="noopener" aria-label="Apri il sito di Ghe Pensi Mi in una nuova scheda" data-i18n-attr="aria-label:camp.ghe.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -600,14 +604,14 @@
             <img src="assets/img/ghe-pensi-mi-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.bar">Bar</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Ghe Pensi Mi</h3>
             <p class="card-progetto__desc" data-i18n="camp.ghe.short">Craft bar di NoLo in Piazza Morbegno: birre artigianali, cocktail, DJ set e stand-up, in una vetrina bold in stile poster, viva come il bancone.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/ghe-pensi-mi/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/maison-charme/" target="_blank" rel="noopener" aria-label="Apri il sito di Maison Charme in una nuova scheda" data-i18n-attr="aria-label:camp.mc.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -616,14 +620,14 @@
             <img src="assets/img/maison-charme-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.hairbeauty">Parrucchiere &amp; estetica</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Maison Charme</h3>
             <p class="card-progetto__desc" data-i18n="camp.mc.short">Parrucchiere e centro estetico a Città Studi: una maison digitale elegante e femminile, «il tuo momento di charme», con servizi e contatti a portata di clic.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/maison-charme/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/time-cut/" target="_blank" rel="noopener" aria-label="Apri il sito di Time Cut in una nuova scheda" data-i18n-attr="aria-label:camp.tc.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -632,14 +636,14 @@
             <img src="assets/img/time-cut-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.parr">Parrucchiere</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Time Cut</h3>
             <p class="card-progetto__desc" data-i18n="camp.tc.short">Parrucchiere di quartiere a NoLo, da Federico e Michele: un sito accogliente e botanico, «prenditi il tuo tempo», con prenotazione diretta su WhatsApp.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/time-cut/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d3" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d3" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/peppe-barber/" target="_blank" rel="noopener" aria-label="Apri il sito di Peppe Barber in una nuova scheda" data-i18n-attr="aria-label:camp.pb.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -648,14 +652,14 @@
             <img src="assets/img/peppe-barber-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.barb">Barbiere</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Peppe Barber</h3>
             <p class="card-progetto__desc" data-i18n="camp.pb.short">Barbershop moderno a NoLo, luminoso e aperto a tutti: taglio e rasatura in uno spazio pulito e accogliente, con prenotazione diretta su WhatsApp.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/peppe-barber/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="bottega">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/torri-food-wine/" target="_blank" rel="noopener" aria-label="Apri il sito di Torri Food & Wine in una nuova scheda" data-i18n-attr="aria-label:camp.torri.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -664,14 +668,14 @@
             <img src="assets/img/torri-food-wine-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.alimentari">Alimentari &amp; vini</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Torri Food & Wine</h3>
             <p class="card-progetto__desc" data-i18n="camp.torri.short">Bottega di alimentari storica di famiglia a NoLo, cent'anni di attività: «i sapori di una volta», tra salumi, formaggi e specialità, in una vetrina all'altezza della sua storia.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/torri-food-wine/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="bar">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/enoteca-lu-mieru/" target="_blank" rel="noopener" aria-label="Apri il sito di Enoteca Lu Mieru in una nuova scheda" data-i18n-attr="aria-label:camp.lm.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -680,14 +684,14 @@
             <img src="assets/img/enoteca-lu-mieru-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.enoteca">Enoteca</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Enoteca Lu Mieru</h3>
             <p class="card-progetto__desc" data-i18n="camp.lm.short">Piccola enoteca di vini sfusi a NoLo, da Giuseppe: «lu mieru» è il vino in dialetto salentino, servito in una vetrina rustica e calda come il negozio, con WhatsApp.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/enoteca-lu-mieru/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="bar">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/harp-pub-guinness/" target="_blank" rel="noopener" aria-label="Apri il sito di Harp Pub Guinness in una nuova scheda" data-i18n-attr="aria-label:camp.harp.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -696,14 +700,14 @@
             <img src="assets/img/harp-pub-guinness-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.pub">Pub</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Harp Pub Guinness</h3>
             <p class="card-progetto__desc" data-i18n="camp.harp.short">Pub e whisky bar dal 1976 in Piazza Leonardo da Vinci, davanti al Politecnico: oltre duecento whisky e il rito della spillatura perfetta in «119,5 secondi».</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/harp-pub-guinness/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/milano-bioestetica/" target="_blank" rel="noopener" aria-label="Apri il sito di Milano BioEstetica in una nuova scheda" data-i18n-attr="aria-label:camp.mbe.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -712,14 +716,14 @@
             <img src="assets/img/milano-bioestetica-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.estetica">Estetica &amp; SPA</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Milano BioEstetica</h3>
             <p class="card-progetto__desc" data-i18n="camp.mbe.short">Centro estetico e Luxury SPA con due sedi a Milano: «il percorso dei sensi», dove le stanze — acqua, vapore, sale — diventano un cammino che cambia clima mentre scorri.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/milano-bioestetica/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/ceccaroni-parrucchieri/" target="_blank" rel="noopener" aria-label="Apri il sito di Ceccaroni Parrucchieri in una nuova scheda" data-i18n-attr="aria-label:camp.cec.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -728,14 +732,14 @@
             <img src="assets/img/ceccaroni-parrucchieri-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.parr">Parrucchiere</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Ceccaroni Parrucchieri</h3>
             <p class="card-progetto__desc" data-i18n="camp.cec.short">Salone da parrucchiere storico in Città Studi, da Stefano con Marika e Noemi, con clienti da oltre vent'anni: una vetrina in stile giornale d'epoca, «da una vita».</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/ceccaroni-parrucchieri/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/oltre-la-bellezza/" target="_blank" rel="noopener" aria-label="Apri il sito di Oltre la Bellezza in una nuova scheda" data-i18n-attr="aria-label:camp.olb.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -744,14 +748,14 @@
             <img src="assets/img/oltre-la-bellezza-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.estetica">Estetica &amp; SPA</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Oltre la Bellezza</h3>
             <p class="card-progetto__desc" data-i18n="camp.olb.short">Piccolo centro estetico e solarium a Città Studi, gestito da donne: il listino reale è il cuore del sito, con il trattamento T-Shape in evidenza e prenotazione su WhatsApp.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/oltre-la-bellezza/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="dolci">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/aloha-gelateria/" target="_blank" rel="noopener" aria-label="Apri il sito di Aloha Gelateria in una nuova scheda" data-i18n-attr="aria-label:camp.alo.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -760,14 +764,14 @@
             <img src="assets/img/aloha-gelateria-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.gelateria">Gelateria</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Aloha Gelateria</h3>
             <p class="card-progetto__desc" data-i18n="camp.alo.short">Gelateria siciliana storica in Città Studi: granita, latte di mandorla e «il miglior gelato di Milano», con i gusti presentati come palline colorate che si sovrappongono.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/aloha-gelateria/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="bar">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/matricola-pub/" target="_blank" rel="noopener" aria-label="Apri il sito di Matricola Pub in una nuova scheda" data-i18n-attr="aria-label:camp.mat.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -776,14 +780,14 @@
             <img src="assets/img/matricola-pub-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.pub">Pub</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Matricola Pub</h3>
             <p class="card-progetto__desc" data-i18n="camp.mat.short">Pub storico del Politecnico in Città Studi: la vetrina segue «la serata», dall'aperitivo all'ultimo giro, con le serate a tema come le Peaky Blinders.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/matricola-pub/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/moma41/" target="_blank" rel="noopener" aria-label="Apri il sito di Moma41 in una nuova scheda" data-i18n-attr="aria-label:camp.mom.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -792,14 +796,14 @@
             <img src="assets/img/moma41-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.estetica">Estetica &amp; SPA</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Moma41 Beauty &amp; Wellness</h3>
             <p class="card-progetto__desc" data-i18n="camp.mom.short">Centro beauty &amp; wellness in Via Padova 41: il civico dà il nome e l'identità al sito, con un grande «41» che accoglie in uno spazio calmo e minimale.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/moma41/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/one-nail-spa/" target="_blank" rel="noopener" aria-label="Apri il sito di One Nail Spa in una nuova scheda" data-i18n-attr="aria-label:camp.one.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -808,14 +812,14 @@
             <img src="assets/img/one-nail-spa-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.nails">Nails</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">One Nail Spa</h3>
             <p class="card-progetto__desc" data-i18n="camp.one.short">Nail spa con due sedi a Milano: la sua firma è «la parete dei colori», una griglia di smalti lucidi da cui scegliere, tra manicure, nail art ed extension ciglia.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/one-nail-spa/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="dolci">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/clandestino-non-esiste/" target="_blank" rel="noopener" aria-label="Apri il sito di Clandestino non esiste in una nuova scheda" data-i18n-attr="aria-label:camp.cla.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -824,14 +828,14 @@
             <img src="assets/img/clandestino-non-esiste-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.forno">Forno</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Clandestino non esiste</h3>
             <p class="card-progetto__desc" data-i18n="camp.cla.short">Micro-forno d'autore a Lambrate, spin-off del forno Onest: pane, pizza, focaccia, pasticceria e specialty coffee, in una vetrina dall'identità ironica e forte.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/clandestino-non-esiste/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="food">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/la-cappelletta/" target="_blank" rel="noopener" aria-label="Apri il sito di La Cappelletta in una nuova scheda" data-i18n-attr="aria-label:camp.cape.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -840,14 +844,14 @@
             <img src="assets/img/la-cappelletta-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.trattoria">Trattoria</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">La Cappelletta</h3>
             <p class="card-progetto__desc" data-i18n="camp.cape.short">Storica trattoria di Lambrate, famosa per la pizza al trancio: il motivo ad arco dell'edicola votiva che le dà il nome torna nell'hero e in ogni cornice.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/la-cappelletta/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/magic-woman/" target="_blank" rel="noopener" aria-label="Apri il sito di Magic Woman in una nuova scheda" data-i18n-attr="aria-label:camp.magic.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -856,14 +860,14 @@
             <img src="assets/img/magic-woman-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.parr">Parrucchiere</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Magic Woman</h3>
             <p class="card-progetto__desc" data-i18n="camp.magic.short">Parrucchiere a conduzione femminile a Lambrate, specialista di lisciatura e cheratina: un sito dal motivo di ciocche fluenti, con la promessa «i tuoi capelli, rinati».</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/magic-woman/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/sunshine-nail/" target="_blank" rel="noopener" aria-label="Apri il sito di Sunshine Nail in una nuova scheda" data-i18n-attr="aria-label:camp.sun.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -872,14 +876,14 @@
             <img src="assets/img/sunshine-nail-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.nails">Nails</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Sunshine Nail</h3>
             <p class="card-progetto__desc" data-i18n="camp.sun.short">Nail bar di Lambrate, di Alice, specialista di Russian Manicure: una vetrina solare col motivo a raggi di sole e la gallery delle unghie in primo piano.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/sunshine-nail/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/ikigai/" target="_blank" rel="noopener" aria-label="Apri il sito di Ikigai in una nuova scheda" data-i18n-attr="aria-label:camp.iki.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -888,14 +892,14 @@
             <img src="assets/img/ikigai-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.estetica">Estetica &amp; SPA</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Ikigai</h3>
             <p class="card-progetto__desc" data-i18n="camp.iki.short">Centro estetico a Lambrate, di Silvia: un sito ispirato all'ikigai giapponese, con un cerchio zen che si disegna e l'atmosfera di un'oasi di serenità.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/ikigai/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="shop">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/20134-lambrate/" target="_blank" rel="noopener" aria-label="Apri il sito di 20134 Lambrate in una nuova scheda" data-i18n-attr="aria-label:camp.vt.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -904,14 +908,14 @@
             <img src="assets/img/20134-lambrate-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.vintage">Vintage &amp; moda</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">20134 Lambrate</h3>
             <p class="card-progetto__desc" data-i18n="camp.vt.short">Negozio di vintage di ricerca e modernariato a Lambrate, con grandi firme a prezzi vintage: il CAP «20134» diventa l'identità grafica di un sito-lookbook editoriale.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/20134-lambrate/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="shop">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/colorificio-grossich/" target="_blank" rel="noopener" aria-label="Apri il sito del Colorificio Grossich in una nuova scheda" data-i18n-attr="aria-label:camp.cg.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -920,14 +924,14 @@
             <img src="assets/img/colorificio-grossich-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.belearti">Belle arti</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Colorificio Grossich</h3>
             <p class="card-progetto__desc" data-i18n="camp.cg.short">Bottega storica di belle arti a Lambrate dal 1990: «il paradiso degli artisti», con lo spettro dei pigmenti come firma grafica e ordine su WhatsApp con ritiro in negozio.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/colorificio-grossich/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="bar">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/enoteca-lambrate/" target="_blank" rel="noopener" aria-label="Apri il sito dell'Enoteca Lambrate in una nuova scheda" data-i18n-attr="aria-label:camp.en.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -936,14 +940,14 @@
             <img src="assets/img/enoteca-lambrate-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.enoteca">Enoteca</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Enoteca Lambrate</h3>
             <p class="card-progetto__desc" data-i18n="camp.en.short">Enoteca e wine bar di Ciro a Milano: la firma è la scala dei prezzi, da € a €€€€, per trovare la bottiglia giusta a ogni budget, in un ambiente scuro e raffinato.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/enoteca-lambrate/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="food">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/rigolo/" target="_blank" rel="noopener" aria-label="Apri il sito del Rigolo in una nuova scheda" data-i18n-attr="aria-label:camp.rig.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -952,14 +956,14 @@
             <img src="assets/img/rigolo-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.ristorante">Ristorante</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Rigolo</h3>
             <p class="card-progetto__desc" data-i18n="camp.rig.short">Ristorante storico di Brera dal 1958, cucina toscana e milanese e ritrovo di artisti: le immagini sono incorniciate come i quadri alle pareti, e «le quattro sale» si visitano come una galleria.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/rigolo/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="food">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/al-toscanaccio/" target="_blank" rel="noopener" aria-label="Apri il sito del Toscanaccio in una nuova scheda" data-i18n-attr="aria-label:camp.tosc.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -968,14 +972,14 @@
             <img src="assets/img/al-toscanaccio-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.trattoria">Trattoria</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Al Toscanaccio</h3>
             <p class="card-progetto__desc" data-i18n="camp.tosc.short">Trattoria toscana in zona Sempione, di Davide: cucina genuina e porzioni abbondanti, con la tovaglia a quadretti che veste il sito e i piatti scritti a mano sulla lavagna.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/al-toscanaccio/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="dolci">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/s-lab/" target="_blank" rel="noopener" aria-label="Apri il sito di S'Lab in una nuova scheda" data-i18n-attr="aria-label:camp.slab.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -984,14 +988,14 @@
             <img src="assets/img/s-lab-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.pasticceria">Pasticceria</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">S'Lab</h3>
             <p class="card-progetto__desc" data-i18n="camp.slab.short">Pasticceria asiatica virale in Chinatown: melon pan, cheesecake giapponese, mochi, dorayaki e torte kawaii, presentati come una vetrina bento di tessere pastello.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/s-lab/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="shop">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/cappelleria-melegari/" target="_blank" rel="noopener" aria-label="Apri il sito della Cappelleria Melegari in una nuova scheda" data-i18n-attr="aria-label:camp.mel.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1000,14 +1004,14 @@
             <img src="assets/img/cappelleria-melegari-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Restyling</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.cappelli">Cappelleria</span> · 2026 · IT/EN · Restyling</p>
             <h3 class="card-progetto__name">Cappelleria Melegari</h3>
             <p class="card-progetto__desc" data-i18n="camp.mel.short">Cappelleria storica di Milano dal 1914, in Chinatown: cappelli uomo e donna su tre piani, Borsalino e su misura, con un catalogo a silhouette e il sigillo «1914».</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/cappelleria-melegari/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/antico-parrucchiere-sarpi/" target="_blank" rel="noopener" aria-label="Apri il sito de L'antico Parrucchiere della Paolo Sarpi in una nuova scheda" data-i18n-attr="aria-label:camp.ap.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1016,14 +1020,14 @@
             <img src="assets/img/antico-parrucchiere-sarpi-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.barb">Barbiere</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">L'antico Parrucchiere della Paolo Sarpi</h3>
             <p class="card-progetto__desc" data-i18n="camp.ap.short">Barbershop storico affacciato su via Sarpi dal 1937, Bottega Storica di Milano: taglio a forbice e il palo del barbiere a righe che scandisce tutta la pagina.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/antico-parrucchiere-sarpi/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="shop">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/carozza-calzature/" target="_blank" rel="noopener" aria-label="Apri il sito di Carozza Calzature in una nuova scheda" data-i18n-attr="aria-label:camp.cz.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1032,14 +1036,14 @@
             <img src="assets/img/carozza-calzature-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.calzature">Calzature</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Carozza Calzature</h3>
             <p class="card-progetto__desc" data-i18n="camp.cz.short">Negozio di calzature di famiglia in zona Sempione, dal 1956 e tre generazioni: comfort e grandi marche raccolti in un «muro delle firme», con Birkenstock in evidenza.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/carozza-calzature/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="shop">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/erboristeria-novetti/" target="_blank" rel="noopener" aria-label="Apri il sito dell'Erboristeria Novetti in una nuova scheda" data-i18n-attr="aria-label:camp.nv.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1048,14 +1052,14 @@
             <img src="assets/img/erboristeria-novetti-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Restyling</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.erboristeria">Erboristeria</span> · 2026 · IT/EN · Restyling</p>
             <h3 class="card-progetto__name">Erboristeria Novetti</h3>
             <p class="card-progetto__desc" data-i18n="camp.nv.short">Erboristeria storica in Chinatown dal 1952 e tre generazioni: oltre cinquecento erbe nei vasi e tisane su misura, con le card «cosa trovi» disegnate come etichette d'apoteca.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/erboristeria-novetti/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="dolci">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/gelateria-solferino/" target="_blank" rel="noopener" aria-label="Apri il sito della Gelateria Solferino in una nuova scheda" data-i18n-attr="aria-label:camp.gs.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1064,14 +1068,14 @@
             <img src="assets/img/gelateria-solferino-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.gelateria">Gelateria</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Gelateria Solferino</h3>
             <p class="card-progetto__desc" data-i18n="camp.gs.short">Piccola gelateria storica di Brera, da oltre trent'anni a conduzione famigliare: gelato artigianale poco zuccherato, presentato come una carta dei gusti tra classici e novità di stagione.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/gelateria-solferino/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="food">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/al-matarel/" target="_blank" rel="noopener" aria-label="Apri il sito di Al Matarel in una nuova scheda" data-i18n-attr="aria-label:camp.mat2.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1080,14 +1084,14 @@
             <img src="assets/img/al-matarel-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Restyling</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.trattoria">Trattoria</span> · 2026 · IT/EN · Restyling</p>
             <h3 class="card-progetto__name">Al Matarel</h3>
             <p class="card-progetto__desc" data-i18n="camp.mat2.short">Antica trattoria milanese di Brera dal 1962: ossobuco, risotto giallo e cotoletta della vecchia Milano, con il matterello («matarèl») come firma e il menù in dialetto meneghino.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/al-matarel/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/mazzotta-hair-design/" target="_blank" rel="noopener" aria-label="Apri il sito di Benito & Salvatore Mazzotta in una nuova scheda" data-i18n-attr="aria-label:camp.maz.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1096,14 +1100,14 @@
             <img src="assets/img/mazzotta-hair-design-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Restyling</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.parr">Parrucchiere</span> · 2026 · IT/EN · Restyling</p>
             <h3 class="card-progetto__name">Benito &amp; Salvatore Mazzotta</h3>
             <p class="card-progetto__desc" data-i18n="camp.maz.short">Hair studio storico di Brera dal 1951, accanto al Piccolo Teatro: eleganza editoriale e la locandina «Hanno scelto Mazzotta», dai grandi nomi del teatro e del cinema.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/mazzotta-hair-design/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="bar">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/un-ottima-annata/" target="_blank" rel="noopener" aria-label="Apri il sito di Un'Ottima Annata in una nuova scheda" data-i18n-attr="aria-label:camp.oa.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1112,14 +1116,14 @@
             <img src="assets/img/un-ottima-annata-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.enoteca">Enoteca</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Un'Ottima Annata</h3>
             <p class="card-progetto__desc" data-i18n="camp.oa.short">Enoteca con degustazione a conduzione femminile in zona Sempione, di tre donne: una linea immaginaria da Udine a Potenza racconta i vini di Friuli e Basilicata, calice per calice.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/un-ottima-annata/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="food">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/tara-ristorante-indiano/" target="_blank" rel="noopener" aria-label="Apri il sito di Tara Ristorante Indiano in una nuova scheda" data-i18n-attr="aria-label:camp.ta.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1128,14 +1132,14 @@
             <img src="assets/img/tara-ristorante-indiano-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Restyling</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.mondo">Cucina dal mondo</span> · 2026 · IT/EN · Restyling</p>
             <h3 class="card-progetto__name">Tara Ristorante Indiano</h3>
             <p class="card-progetto__desc" data-i18n="camp.ta.short">Ristorante indiano storico all'Arco della Pace dal 1997: curry e tandoor con cinque cuochi indiani, quasi tutto gluten free e tanta scelta veg, sotto il segno di una stella a otto punte.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/tara-ristorante-indiano/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d3" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d3" data-cat="food">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/torre-di-pisa/" target="_blank" rel="noopener" aria-label="Apri il sito di Trattoria Torre di Pisa in una nuova scheda" data-i18n-attr="aria-label:camp.tp.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1144,14 +1148,14 @@
             <img src="assets/img/torre-di-pisa-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Restyling</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.trattoria">Trattoria</span> · 2026 · IT/EN · Restyling</p>
             <h3 class="card-progetto__name">Trattoria Torre di Pisa</h3>
             <p class="card-progetto__desc" data-i18n="camp.tp.short">Trattoria toscana storica di Brera dal 1959, ritrovo di artisti e giornalisti: cucina di campagna e orario continuato tutti i giorni, con la torre pendente come emblema.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/torre-di-pisa/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="shop">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/urzi-vintage-selection/" target="_blank" rel="noopener" aria-label="Apri il sito di Urzì Vintage Selection in una nuova scheda" data-i18n-attr="aria-label:camp.ur.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1160,14 +1164,14 @@
             <img src="assets/img/urzi-vintage-selection-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.vintage">Vintage &amp; moda</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Urzì Vintage Selection</h3>
             <p class="card-progetto__desc" data-i18n="camp.ur.short">Boutique di moda vintage femminile nel cuore di Brera dal 1974, la selezione di Lisa: borse, giacche, seta e gioielli, con il cartellino appeso come filo conduttore del sito.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/urzi-vintage-selection/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="bottega">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/rossi-e-grassi/" target="_blank" rel="noopener" aria-label="Apri il sito di Rossi & Grassi in una nuova scheda" data-i18n-attr="aria-label:camp.rg.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1176,14 +1180,14 @@
             <img src="assets/img/rossi-e-grassi-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Restyling</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.gastronomia">Gastronomia</span> · 2026 · IT/EN · Restyling</p>
             <h3 class="card-progetto__name">Rossi &amp; Grassi</h3>
             <p class="card-progetto__desc" data-i18n="camp.rg.short">Gastronomia e salumeria storica di Brera dal 1971: salumi, formaggi, pasta fresca a mano e piatti pronti, con i cinque reparti «al banco» come un percorso numerato.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/rossi-e-grassi/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d3" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d3" data-cat="food">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/osteria-del-borgo-antico/" target="_blank" rel="noopener" aria-label="Apri il sito di Osteria del Borgo Antico in una nuova scheda" data-i18n-attr="aria-label:camp.oba.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1192,14 +1196,14 @@
             <img src="assets/img/osteria-del-borgo-antico-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.osteria">Osteria</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Osteria del Borgo Antico</h3>
             <p class="card-progetto__desc" data-i18n="camp.oba.short">Osteria di cucina mediterranea in zona Sempione: uno spazio intimo a lume di candela, dove la parete di foto in bianco e nero si accende di colore al tuo passaggio.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/osteria-del-borgo-antico/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="food">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/bokok/" target="_blank" rel="noopener" aria-label="Apri il sito di Bokok in una nuova scheda" data-i18n-attr="aria-label:camp.bok.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1208,14 +1212,14 @@
             <img src="assets/img/bokok-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.mondo">Cucina dal mondo</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Bokok 珍宝阁</h3>
             <p class="card-progetto__desc" data-i18n="camp.bok.short">Sala da tè di Hong Kong in Chinatown dal 2019: dim sum fatto a mano dentro una vera biblioteca, con le pareti di libri che diventano il menù «gli scaffali dei sapori».</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/bokok/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/matteo-palermo-barbiere/" target="_blank" rel="noopener" aria-label="Apri il sito di Matteo Palermo Barbiere in una nuova scheda" data-i18n-attr="aria-label:camp.mpb.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1224,14 +1228,14 @@
             <img src="assets/img/matteo-palermo-barbiere-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.barb">Barbiere</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Matteo Palermo Barbiere</h3>
             <p class="card-progetto__desc" data-i18n="camp.mpb.short">Barbiere e bottega storica di Brera dal 1953, tra mobili antichi e acque profumate: «solo forbici, niente macchinetta», e alla bottega si parla di cinema, sport e vita.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/matteo-palermo-barbiere/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d3" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d3" data-cat="food">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/collo-danatra/" target="_blank" rel="noopener" aria-label="Apri il sito di Collo d'Anatra in una nuova scheda" data-i18n-attr="aria-label:camp.ca.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1240,14 +1244,14 @@
             <img src="assets/img/collo-danatra-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.mondo">Cucina dal mondo</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Collo d'Anatra 绝味鸭料</h3>
             <p class="card-progetto__desc" data-i18n="camp.ca.short">Micro banco di street food cinese in Chinatown, aperto fino a tarda notte e dedicato all'anatra intera: una guida ai tagli spiega ogni preparazione, dal collo alle ali.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/collo-danatra/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="shop">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/libreria-galleria-demetra/" target="_blank" rel="noopener" aria-label="Apri il sito di Libreria Galleria Demetra in una nuova scheda" data-i18n-attr="aria-label:camp.dm.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1256,14 +1260,14 @@
             <img src="assets/img/libreria-galleria-demetra-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Concept</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.libreria">Libreria</span> · 2026 · IT/EN · Concept</p>
             <h3 class="card-progetto__name">Libreria Galleria Demetra</h3>
             <p class="card-progetto__desc" data-i18n="camp.dm.short">Libreria antiquaria e galleria di Brera: libri antichi e rari, incunaboli e libri d'artista, raccontati come un frontespizio tipografico lungo sette secoli, dal Quattrocento a oggi.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/libreria-galleria-demetra/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="bottega">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/pasta-della-francesca/" target="_blank" rel="noopener" aria-label="Apri il sito di Pasta della Francesca in una nuova scheda" data-i18n-attr="aria-label:camp.pf.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1272,14 +1276,14 @@
             <img src="assets/img/pasta-della-francesca-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Restyling</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.pastafresca">Pasta fresca</span> · 2026 · IT/EN · Restyling</p>
             <h3 class="card-progetto__name">Pasta della Francesca</h3>
             <p class="card-progetto__desc" data-i18n="camp.pf.short">Bottega di famiglia di pasta fresca in zona Sempione, una delle poche rimaste a Milano: ravioli, gnocchi, piatti pronti e torte, in una vetrina calda e casalinga.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/pasta-della-francesca/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d3" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d3" data-cat="food">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/chateau-dufan/" target="_blank" rel="noopener" aria-label="Apri il sito di Chateau Dufan in una nuova scheda" data-i18n-attr="aria-label:camp.cd.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1288,14 +1292,14 @@
             <img src="assets/img/chateau-dufan-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Restyling</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.mondo">Cucina dal mondo</span> · 2026 · IT/EN · Restyling</p>
             <h3 class="card-progetto__name">Chateau Dufan</h3>
             <p class="card-progetto__desc" data-i18n="camp.cd.short">Grande ristorante di cucine fusion asiatiche tra Sarpi e Corso Como: un menù-atlante che viaggia tra «le cucine d'Asia», dal wok al sushi, in un ambiente ampio e scenografico.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/chateau-dufan/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="food">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/trattoria-madonnina/" target="_blank" rel="noopener" aria-label="Apri il sito della Trattoria Madonnina in una nuova scheda" data-i18n-attr="aria-label:camp.mad.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1304,14 +1308,14 @@
             <img src="assets/img/trattoria-madonnina-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Sito nuovo</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.trattoria">Trattoria</span> · 2026 · IT/EN · Sito nuovo</p>
             <h3 class="card-progetto__name">Trattoria Madonnina</h3>
             <p class="card-progetto__desc" data-i18n="camp.mad.short">La trattoria più antica di Milano, dal 1722, nel cuore del Ticinese: cucina di casa e cortile con bocciofila, con l'edicola votiva che le dà il nome e trecento anni di storia.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/trattoria-madonnina/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="bottega">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/salumeria-cassani/" target="_blank" rel="noopener" aria-label="Apri il sito della Salumeria Drogheria Cassani in una nuova scheda" data-i18n-attr="aria-label:camp.cas.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1320,14 +1324,14 @@
             <img src="assets/img/salumeria-cassani-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Sito nuovo</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.salumeria">Salumeria</span> · 2026 · IT/EN · Sito nuovo</p>
             <h3 class="card-progetto__name">Salumeria Drogheria Cassani</h3>
             <p class="card-progetto__desc" data-i18n="camp.cas.short">Salumeria e drogheria di famiglia a Porta Romana dal 1898, patria dei mondeghini: una bottega che parla ancora milanese, con la targa «chi se parla anca el milanes» all'ingresso.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/salumeria-cassani/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d3" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d3" data-cat="shop">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/cartoleria-boati/" target="_blank" rel="noopener" aria-label="Apri il sito della Cartoleria Boati in una nuova scheda" data-i18n-attr="aria-label:camp.boa.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1336,14 +1340,14 @@
             <img src="assets/img/cartoleria-boati-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Sito nuovo</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.cartoleria">Cartoleria</span> · 2026 · IT/EN · Sito nuovo</p>
             <h3 class="card-progetto__name">Cartoleria Boati</h3>
             <p class="card-progetto__desc" data-i18n="camp.boa.short">Cartoleria storica di Porta Romana dal 1942, oggi delle nipoti Chiara e Giulia: un sito a forma di quaderno, scritto a mano e siglato dal timbro «Autentica 1942».</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/cartoleria-boati/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="shop">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/calzature-gallon/" target="_blank" rel="noopener" aria-label="Apri il sito di Calzature Gallon in una nuova scheda" data-i18n-attr="aria-label:camp.gal.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1352,14 +1356,14 @@
             <img src="assets/img/calzature-gallon-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Sito nuovo</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.calzature">Calzature</span> · 2026 · IT/EN · Sito nuovo</p>
             <h3 class="card-progetto__name">Calzature Gallon</h3>
             <p class="card-progetto__desc" data-i18n="camp.gal.short">Calzoleria storica del Ticinese dal 1955, in piazza Sant'Eustorgio: le vere friulane in velluto, «una per ogni colore», per chi cerca la scarpa fatta come una volta.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/calzature-gallon/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="servizi">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/ottica-chierichetti/" target="_blank" rel="noopener" aria-label="Apri il sito dell'Ottica Chierichetti in una nuova scheda" data-i18n-attr="aria-label:camp.chi.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1368,14 +1372,14 @@
             <img src="assets/img/ottica-chierichetti-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Restyling</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.ottica">Ottica</span> · 2026 · IT/EN · Restyling</p>
             <h3 class="card-progetto__name">Ottica Arnaldo Chierichetti</h3>
             <p class="card-progetto__desc" data-i18n="camp.chi.short">Ottica storica di Porta Romana dal 1914, quattro generazioni: accanto agli occhiali, «il museo dell'ottica» con gli strumenti d'epoca raccolti in negozio.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/ottica-chierichetti/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d3" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d3" data-cat="shop">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/psycho-records/" target="_blank" rel="noopener" aria-label="Apri il sito di Psycho in una nuova scheda" data-i18n-attr="aria-label:camp.psy.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1384,14 +1388,14 @@
             <img src="assets/img/psycho-records-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Sito nuovo</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.dischi">Dischi</span> · 2026 · IT/EN · Sito nuovo</p>
             <h3 class="card-progetto__name">Psycho — dischi & vinili</h3>
             <p class="card-progetto__desc" data-i18n="camp.psy.short">Negozio di dischi storico del Ticinese dal 1988, di Fabio e Amos: un sito nero in stile gig-poster fai-da-te, dove il cartellino racconta ogni vinile.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/psycho-records/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="food">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/mido-ristorante-arabo/" target="_blank" rel="noopener" aria-label="Apri il sito di Mido in una nuova scheda" data-i18n-attr="aria-label:camp.mido.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1400,14 +1404,14 @@
             <img src="assets/img/mido-ristorante-arabo-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Restyle</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.mondo">Cucina dal mondo</span> · 2026 · IT/EN · Restyle</p>
             <h3 class="card-progetto__name">Mido — ristorante arabo</h3>
             <p class="card-progetto__desc" data-i18n="camp.mido.short">Ristorante arabo storico del Ticinese dal 1990, della famiglia Nassar: couscous cotto otto ore e mezze servite in tre misure, sotto un arco arabo disegnato su misura.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/mido-ristorante-arabo/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="dolci">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/pasticceria-sommariva/" target="_blank" rel="noopener" aria-label="Apri il sito della Pasticceria Sommariva in una nuova scheda" data-i18n-attr="aria-label:camp.som.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1416,14 +1420,14 @@
             <img src="assets/img/pasticceria-sommariva-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Restyle</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.pasticceria">Pasticceria</span> · 2026 · IT/EN · Restyle</p>
             <h3 class="card-progetto__name">Pasticceria Sommariva</h3>
             <p class="card-progetto__desc" data-i18n="camp.som.short">Pasticceria storica di Porta Romana dal 1919, premiata e famosa per gli Amaretti Morbidi: la sua storia si legge in tre epoche, dal 1919 a oggi, tra medaglie e vetrine.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/pasticceria-sommariva/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d3" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d3" data-cat="shop">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/bele-milano/" target="_blank" rel="noopener" aria-label="Apri il sito di Belè Milano in una nuova scheda" data-i18n-attr="aria-label:camp.bele.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1432,14 +1436,14 @@
             <img src="assets/img/bele-milano-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Restyle</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.gioielleria">Gioielleria</span> · 2026 · IT/EN · Restyle</p>
             <h3 class="card-progetto__name">Belè Milano — laboratorio orafo</h3>
             <p class="card-progetto__desc" data-i18n="camp.bele.short">Laboratorio orafo tra Crocetta e Porta Romana, di Giacomo e figlio: gioielli su misura, restauri e corallo, raccontati «al banchetto», dal desiderio al gioiello.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/bele-milano/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d1" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d1" data-cat="bar">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/torrefazione-colombia/" target="_blank" rel="noopener" aria-label="Apri il sito della Torrefazione Colombia in una nuova scheda" data-i18n-attr="aria-label:camp.col.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1448,14 +1452,14 @@
             <img src="assets/img/torrefazione-colombia-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Sito nuovo</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.torref">Torrefazione</span> · 2026 · IT/EN · Sito nuovo</p>
             <h3 class="card-progetto__name">Torrefazione Colombia</h3>
             <p class="card-progetto__desc" data-i18n="camp.col.short">Torrefazione e bar di quartiere nel Ticinese, a conduzione femminile: caffè tostato in laboratorio e servito al banco, con «le miscele» sfuse dalla mattina all'aperitivo.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/torrefazione-colombia/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="beauty">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/i-vigentini/" target="_blank" rel="noopener" aria-label="Apri il sito di I Vigentini in una nuova scheda" data-i18n-attr="aria-label:camp.vig.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1464,14 +1468,14 @@
             <img src="assets/img/i-vigentini-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Sito nuovo</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.barb">Barbiere</span> · 2026 · IT/EN · Sito nuovo</p>
             <h3 class="card-progetto__name">I Vigentini — barbieri dal 1968</h3>
             <p class="card-progetto__desc" data-i18n="camp.vig.short">Barbiere storico di Porta Vigentina dal 1968, oggi portato avanti da tre barbiere: «le regole della bottega», il taglio classico e la «barba ricamata» a mano.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/i-vigentini/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="shop">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/groupies-vintage/" target="_blank" rel="noopener" aria-label="Apri il sito di Groupies Vintage in una nuova scheda" data-i18n-attr="aria-label:camp.grp.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1480,14 +1484,14 @@
             <img src="assets/img/groupies-vintage-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Sito nuovo</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.vintage">Vintage &amp; moda</span> · 2026 · IT/EN · Sito nuovo</p>
             <h3 class="card-progetto__name">Groupies Vintage</h3>
             <p class="card-progetto__desc" data-i18n="camp.grp.short">Vintage rock e streetstyle nel Ticinese dal 2011, di Alice: «il vintage a peso», tra pezzi a prezzo fisso e capi al chilo, tutti rilavorati a mano.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/groupies-vintage/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d3" data-cat="vetrina">
+        <article class="progetto card-progetto reveal reveal-d3" data-cat="bottega">
           <a class="card-progetto__shot" href="https://rotenzark.github.io/rosticceria-gilardi/" target="_blank" rel="noopener" aria-label="Apri il sito della Rosticceria Gilardi in una nuova scheda" data-i18n-attr="aria-label:camp.gil.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1496,14 +1500,14 @@
             <img src="assets/img/rosticceria-gilardi-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.vetrina">Vetrina</span> · 2026 · IT/EN · Sito nuovo</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.rosticceria">Rosticceria</span> · 2026 · IT/EN · Sito nuovo</p>
             <h3 class="card-progetto__name">Rosticceria Gilardi</h3>
             <p class="card-progetto__desc" data-i18n="camp.gil.short">Rosticceria e gastronomia di famiglia in Corso Italia dal 1968: piatti pronti fatti ogni mattina, con «il menù del giorno» scritto a mano su una lavagna che cambia ogni giorno.</p>
             <a class="card-progetto__link" href="https://rotenzark.github.io/rosticceria-gilardi/" target="_blank" rel="noopener"><span data-i18n="camp.visit">Visita il sito</span><span aria-hidden="true"> →</span></a>
           </div>
         </article>
 
-        <article class="progetto card-progetto reveal reveal-d2" data-cat="alta">
+        <article class="progetto card-progetto reveal reveal-d2" data-cat="studio">
           <a class="card-progetto__shot" href="index.html" aria-label="Torna alla home di Bespoke Studio" data-i18n-attr="aria-label:camp.bespoke.open">
             <span class="shot-bar" aria-hidden="true">
               <span class="dot"></span><span class="dot"></span><span class="dot"></span>
@@ -1512,7 +1516,7 @@
             <img src="assets/img/bespoke-desktop.jpg" alt="" width="1440" height="900">
           </a>
           <div class="card-progetto__body">
-            <p class="progetto__meta mono"><span data-i18n="camp.f.alta">Alta misura</span> · 2026 · IT/EN</p>
+            <p class="progetto__meta mono"><span class="tag" data-i18n="cat.m.studio">Il nostro sito</span> · 2026 · IT/EN</p>
             <h3 class="card-progetto__name">Bespoke Studio</h3>
             <p class="card-progetto__desc" data-i18n="camp.bespoke.short">Il nostro atelier: intro ricamata lettera per lettera e un filo rosso che cuce la pagina mentre scorri. Il capo che indossiamo noi.</p>
             <a class="card-progetto__link" href="index.html"><span data-i18n="camp.bespoke.visit">Guarda la home</span><span aria-hidden="true"> →</span></a>
@@ -1553,6 +1557,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=95"></script>
+  <script src="js/main.js?v=96"></script>
 </body>
 </html>
