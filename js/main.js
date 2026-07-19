@@ -161,6 +161,10 @@
     'cat.macro.servizi': { it: "Servizi & Casa", en: "Services" },
     'cat.m.parr': { it: "Parrucchiere", en: "Hair salon" },
     'cat.m.barb': { it: "Barbiere", en: "Barber" },
+    /* alcune card usano la forma lunga: senza queste due voci il tag
+       restava in italiano anche in EN (trovato dal lint il 19/7/2026) */
+    'cat.m.parrucchiere': { it: "Parrucchiere", en: "Hair salon" },
+    'cat.m.barbiere': { it: "Barbiere", en: "Barber" },
     'cat.m.nails': { it: "Nails", en: "Nails" },
     'cat.m.estetica': { it: "Estetica & SPA", en: "Beauty & spa" },
     'cat.m.hairbeauty': { it: "Parrucchiere & estetica", en: "Hair & beauty" },
@@ -459,6 +463,8 @@
     'camp.misciolgo.open': { it: "Apri il sito di MiSciolgo in una nuova scheda", en: "Open the MiSciolgo website in a new tab", },
     'camp.baraffori.short': { it: "Il bar di quartiere che scrive il punteggio del caffè accanto al prezzo dell'espresso. La domanda in cima al sito — «Qual è il tuo caffè?» — è la loro, copiata dalla lavagna del banco: da una parte la miscela di tutti i giorni, dall'altra le monorigini con torrefazione, processo e note.", en: "The neighbourhood bar that writes the coffee's cup score next to the price of an espresso. The question at the top of the site — “What's your coffee?” — is theirs, copied from the board on the counter: on one side the everyday blend, on the other the single origins with roaster, process and tasting notes.", },
     'camp.baraffori.open': { it: "Apri il sito di Bar Affori in una nuova scheda", en: "Open the Bar Affori website in a new tab", },
+    'camp.lattmaffucci.short': { it: "Un indirizzo solo che fa due mestieri: a mezzogiorno la trattoria con la lavagna scritta a gesso, la sera il pesce in un turno unico alle 20:30. Il sito non lo racconta, lo mostra: la settimana è disegnata come una griglia e sono le caselle piene a far capire da sole quando è una cosa e quando è l'altra.", en: "One address doing two jobs: at midday the trattoria with its chalk blackboard, in the evening fish in a single sitting at 8:30pm. The site doesn't explain it, it shows it: the week is drawn as a grid, and the filled cells alone make clear when it is one thing and when it is the other.", },
+    'camp.lattmaffucci.open': { it: "Apri il sito di Latteria Maffucci in una nuova scheda", en: "Open the Latteria Maffucci website in a new tab", },
     'camp.otticamiro.short': { it: "L'ottica indipendente di Affori, all'angolo di Via Astesani: visita della vista, lenti progressive e lenti nuove sulla montatura che hai già. Il sito comincia sfocato e si mette a fuoco — e una fascia lascia al visitatore il cursore della nitidezza.", en: "The independent optician of Affori, on the corner of Via Astesani: eye tests, progressive lenses and new lenses on the frame you already own. The site starts blurred and comes into focus — and one band hands the sharpness slider to the visitor.", },
     'camp.otticamiro.open': { it: "Apri il sito di Ottica Mirò in una nuova scheda", en: "Open the Ottica Mirò website in a new tab", },
     'camp.lineauomo.short': { it: "Il barbiere di Dergano dove il taglio si lavora a forbici e l'appuntamento si prende con un messaggio. Il sito parte dal loro nome: una linea sola che si traccia sullo schermo e diventa il profilo di chi si è appena seduto. Dentro, il giallo delle pareti e il rosso delle poltrone.", en: "The Dergano barber where the cut is worked with scissors and you book with a message. The site starts from their name: a single line that draws itself on screen and becomes the profile of whoever has just sat down. Inside, the yellow of the walls and the red of the chairs.", },
