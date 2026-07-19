@@ -250,9 +250,11 @@ a { color: inherit; }
   justify-content: space-between;
   gap: 24px;
   padding: 14px var(--pad);
-  background: rgba(19, 17, 16, 0.82);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  /* NIENTE backdrop-filter su header/nav: renderebbe .nav il containing block
+     di ogni discendente position:fixed (bug drawer S'Lab/Bokok/Osteria 16/7).
+     Qui il drawer è un fratello, non un figlio, ma la regola resta: si copre
+     con un fondo più pieno invece che con la sfocatura. */
+  background: rgba(19, 17, 16, 0.97);
   border-bottom: 1px solid var(--line-soft);
 }
 
