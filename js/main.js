@@ -786,7 +786,12 @@
       svg.appendChild(defs);
 
       revealPath = document.createElementNS(NS, 'path');
-      revealPath.setAttribute('class', 'thread-reveal');
+      // NON chiamarla "*reveal*": il filo non è un elemento a comparsa, si
+      // disegna e si nasconde da solo sotto 1px di segmento. Col vecchio nome
+      // "thread-reveal" finiva nel selettore [class*="reveal"] della QA e
+      // faceva scattare reveal-vanish/reveal-never-shown su una decorazione
+      // che funzionava benissimo (20/7/2026).
+      revealPath.setAttribute('class', 'thread-draw');
       revealPath.setAttribute('d', d);
       revealPath.setAttribute('fill', 'none');
       revealPath.setAttribute('stroke-width', '5');
