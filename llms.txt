@@ -1,0 +1,21 @@
+# Bespoke Studio
+
+> Agenzia web a Milano, nata nel 2026: siti web su misura, disegnati e sviluppati a mano (HTML, CSS e JavaScript, senza template né framework) per bar, ristoranti, negozi, studi, botteghe e aziende. Preventivo chiaro, voce per voce; il sito va online sul dominio del cliente.
+
+## Pagine
+
+- [Home](https://bespokestud.io/): i tre tagli (Vetrina, Business, Alta misura), cosa entra nel preventivo, il metodo, chi siamo, le domande frequenti, i contatti.
+- [Il campionario](https://bespokestud.io/lavori.html): le proposte (siti dimostrativi disegnati per attività vere di Milano, segnati come proposte, non commissionati) e i lavori consegnati.
+- [Siti web per ristoranti, bar e locali a Milano](https://bespokestud.io/siti-web-ristoranti-milano.html)
+- [Siti web per parrucchieri, barbieri e centri estetici a Milano](https://bespokestud.io/siti-web-parrucchieri-estetisti-milano.html)
+- [Siti web per negozi e botteghe a Milano](https://bespokestud.io/siti-web-negozi-botteghe-milano.html)
+
+## Chi siamo
+
+- Kristian Cimò, Founder & Developer: disegna e sviluppa i siti.
+- Stephane Boka, Sales: segue i clienti.
+
+## Contatti
+
+- WhatsApp e telefono: +39 389 621 4452 (lunedì–sabato, 9–19; rispondiamo in giornata)
+- Email: info@bespokestud.io

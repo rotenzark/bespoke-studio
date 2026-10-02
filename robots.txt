@@ -1,0 +1,7 @@
+# robots.txt di bespokestud.io — 2/10/2026
+# Tutto il sito è leggibile da tutti i motori e da tutti i bot, anche quelli delle AI: lo studio vuole farsi trovare e citare.
+# Non bloccare /assets/, /css/, /js/: servono a Google per disegnare la pagina.
+User-agent: *
+Allow: /
+
+Sitemap: https://bespokestud.io/sitemap.xml

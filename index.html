@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bespoke Studio — Siti web su misura · Milano</title>
-  <meta name="description" content="Bespoke Studio è una sartoria digitale a Milano: siti web disegnati e sviluppati a mano, su misura per attività locali, aziende e brand. Nessun template.">
-  <meta property="og:title" content="Bespoke Studio — Siti web su misura">
-  <meta property="og:description" content="Sartoria digitale a Milano. Siti web disegnati e sviluppati a mano, su misura per la tua attività. Nessun template.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Bespoke Studio — Agenzia web a Milano · Siti web su misura</title>
+  <meta name="description" content="Siti web disegnati e sviluppati a mano per bar, ristoranti, negozi, studi e botteghe di Milano. Preventivo chiaro, voce per voce; rispondiamo in giornata su WhatsApp.">
+  <meta property="og:title" content="Bespoke Studio — Agenzia web a Milano · Siti web su misura">
+  <meta property="og:description" content="Siti web disegnati e sviluppati a mano per bar, ristoranti, negozi, studi e botteghe di Milano. Nessun template.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bespokestud.io/">
   <meta property="og:image" content="https://bespokestud.io/assets/img/og-image.jpg">
@@ -16,7 +18,6 @@
   <meta property="og:image:alt" content="Bespoke Studio — Siti web cuciti su misura · Milano">
   <meta property="og:site_name" content="Bespoke Studio">
   <meta property="og:locale" content="it_IT">
-  <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://bespokestud.io/">
   <meta name="theme-color" content="#141210">
@@ -27,33 +28,87 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Bespoke Studio",
-    "description": "Sartoria digitale a Milano: siti web su misura, disegnati e sviluppati a mano.",
-    "url": "https://bespokestud.io/",
-    "telephone": "+393896214452",
-    "email": "info@bespokestud.io",
-    "address": { "@type": "PostalAddress", "addressLocality": "Milano", "addressCountry": "IT" },
-    "image": "https://bespokestud.io/assets/img/og-image.jpg",
-    "priceRange": "€€"
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://bespokestud.io/#organization",
+        "name": "Bespoke Studio",
+        "description": "Agenzia web a Milano: siti web su misura, disegnati e sviluppati a mano per bar, ristoranti, negozi, studi, botteghe e aziende.",
+        "url": "https://bespokestud.io/",
+        "logo": { "@type": "ImageObject", "@id": "https://bespokestud.io/#logo", "url": "https://bespokestud.io/assets/img/apple-touch-icon.png", "caption": "Bespoke Studio" },
+        "image": "https://bespokestud.io/assets/img/og-image.jpg",
+        "telephone": "+393896214452",
+        "email": "info@bespokestud.io",
+        "foundingDate": "2026",
+        "address": { "@type": "PostalAddress", "addressLocality": "Milano", "addressCountry": "IT" },
+        "areaServed": { "@type": "City", "name": "Milano" },
+        "knowsLanguage": ["it", "en"],
+        "founder": { "@id": "https://bespokestud.io/#kristian-cimo" },
+        "employee": [{ "@id": "https://bespokestud.io/#kristian-cimo" }, { "@id": "https://bespokestud.io/#stephane-boka" }],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "telephone": "+393896214452",
+          "email": "info@bespokestud.io",
+          "availableLanguage": ["it", "en"],
+          "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "09:00", "closes": "19:00" }
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "I tagli",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Vetrina", "description": "Per bar, ristoranti, negozi, studi e botteghe: il sito che presenta bene e fa arrivare clienti." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business", "description": "Per PMI e aziende: più pagine, più funzioni, più mercati. Un sito che lavora con te." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Alta misura", "description": "Per brand che vogliono un pezzo unico: un sito che nessun altro potrà avere." } }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://bespokestud.io/#website",
+        "url": "https://bespokestud.io/",
+        "name": "Bespoke Studio",
+        "inLanguage": "it",
+        "publisher": { "@id": "https://bespokestud.io/#organization" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://bespokestud.io/#webpage",
+        "url": "https://bespokestud.io/",
+        "name": "Bespoke Studio — Agenzia web a Milano · Siti web su misura",
+        "description": "Siti web disegnati e sviluppati a mano per bar, ristoranti, negozi, studi e botteghe di Milano. Preventivo chiaro, voce per voce; rispondiamo in giornata su WhatsApp.",
+        "inLanguage": "it",
+        "isPartOf": { "@id": "https://bespokestud.io/#website" },
+        "about": { "@id": "https://bespokestud.io/#organization" },
+        "dateModified": "2026-10-02",
+        "primaryImageOfPage": { "@type": "ImageObject", "url": "https://bespokestud.io/assets/img/og-image.jpg", "width": 1200, "height": 630 }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://bespokestud.io/#kristian-cimo",
+        "name": "Kristian Cimò",
+        "jobTitle": "Founder & Developer",
+        "worksFor": { "@id": "https://bespokestud.io/#organization" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://bespokestud.io/#stephane-boka",
+        "name": "Stephane Boka",
+        "jobTitle": "Sales",
+        "worksFor": { "@id": "https://bespokestud.io/#organization" }
+      }
+    ]
   }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..640;1,9..144,340..640&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="preload" href="assets/fonts/fraunces-340-640-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts/fonts.css?v=1">
+  <link rel="stylesheet" href="css/style.css?v=10">
+  <script src="js/main.js?v=312" defer></script>
 </head>
-<body>
+<body data-page="home">
 
   <a class="skip-link" href="#main" data-i18n="skip">Salta al contenuto</a>
-
-  <!-- Intro di caricamento: il filo cuce la scritta -->
-  <div class="intro" id="intro" aria-hidden="true">
-    <svg class="intro__svg" viewBox="0 0 640 150" focusable="false">
-      <text class="intro__word" id="intro-word" x="320" y="104" text-anchor="middle">Bespoke</text>
-    </svg>
-    <p class="intro__sub mono">STUDIO · MILANO</p>
-  </div>
 
   <!-- ===================== NAV ===================== -->
   <header class="nav" id="top">
@@ -73,11 +128,11 @@
 
     <div class="nav__side">
       <div class="lang" role="group" aria-label="Lingua / Language">
-        <button class="lang__btn is-active" data-lang="it" aria-pressed="true">IT</button>
+        <button class="lang__btn is-active" data-lang="it" aria-pressed="true">IT<span class="visually-hidden"> — Italiano</span></button>
         <span class="lang__sep" aria-hidden="true">/</span>
-        <button class="lang__btn" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang__btn" data-lang="en" aria-pressed="false">EN<span class="visually-hidden"> — English</span></button>
       </div>
-      <a class="btn btn--primary nav__cta" href="#contatti" data-i18n="nav.cta">Prendiamo le misure</a>
+      <a class="btn btn--primary nav__cta" href="#contatti" data-i18n="nav.cta">Chiedi un preventivo</a>
       <button class="nav__burger" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span>
       </button>
@@ -92,34 +147,36 @@
       <a href="lavori.html" data-i18n="nav.work">Lavori</a>
       <a href="#metodo" data-i18n="nav.method">Metodo</a>
       <a href="#studio" data-i18n="nav.studio">Studio</a>
+      <a href="#domande" data-i18n="nav.faq">Domande</a>
       <a href="#contatti" data-i18n="nav.contact">Contatti</a>
     </nav>
-    <a class="btn btn--primary menu__cta" href="#contatti" data-i18n="nav.cta">Prendiamo le misure</a>
+    <a class="btn btn--primary menu__cta" href="#contatti" data-i18n="nav.cta">Chiedi un preventivo</a>
     <p class="menu__note mono" data-i18n="menu.note">CUCITO A MANO A MILANO</p>
   </div>
 
   <main id="main">
 
     <!-- ===================== HERO ===================== -->
+    <!-- niente animazioni d'ingresso sul primo schermo: il testo si vede subito (audit P1) -->
     <section class="hero">
       <div class="hero__inner">
-        <p class="hero__eyebrow mono reveal" data-i18n="hero.eyebrow">BESPOKE STUDIO — SARTORIA DIGITALE · MILANO</p>
+        <p class="hero__eyebrow mono" data-i18n="hero.eyebrow">BESPOKE STUDIO — AGENZIA WEB A MILANO</p>
         <h1 class="hero__title">
-          <span class="reveal reveal-d1" data-i18n="hero.title1">Siti web cuciti</span><br>
-          <em class="hero__title-em reveal reveal-d2">
-            <span data-i18n="hero.title2">su misura.</span>
+          <span data-i18n="hero.title1">Siti web su misura,</span><br>
+          <em class="hero__title-em">
+            <span data-i18n="hero.title2">cuciti a Milano.</span>
             <svg class="stitch stitch--hero" viewBox="0 0 320 14" preserveAspectRatio="none" aria-hidden="true">
               <path d="M2 8 Q 80 2, 160 8 T 318 7" fill="none" />
               <circle cx="4" cy="8" r="3.4" class="stitch__knot"/>
             </svg>
           </em>
         </h1>
-        <p class="hero__sub reveal reveal-d3" data-i18n="hero.sub">Due artigiani, un metodo preciso, nessun modello preconfezionato. Disegniamo e sviluppiamo siti che stanno bene addosso alla tua attività — dalla bottega sotto casa al brand che vuole distinguersi.</p>
-        <div class="hero__cta reveal reveal-d4">
-          <a class="btn btn--primary" href="#contatti" data-i18n="hero.cta1">Prendiamo le misure</a>
-          <a class="btn btn--ghost" href="#lavori" data-i18n="hero.cta2">Guarda un lavoro</a>
+        <p class="hero__sub" data-i18n="hero.sub">Realizziamo siti web disegnati e sviluppati a mano per bar, ristoranti, negozi, studi e botteghe, e per le aziende che vogliono distinguersi. Nessun template: partiamo dalla tua attività.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#contatti" data-i18n="hero.cta1">Chiedi un preventivo</a>
+          <a class="btn btn--ghost" href="lavori.html" data-i18n="hero.cta2">Sfoglia il campionario</a>
         </div>
-        <p class="hero__note mono reveal reveal-d5" data-i18n="hero.note">RISPONDIAMO IN GIORNATA — WHATSAPP, TELEFONO O EMAIL</p>
+        <p class="hero__note mono" data-i18n="hero.note">RISPONDIAMO IN GIORNATA — WHATSAPP, TELEFONO O EMAIL</p>
       </div>
       <div class="hero__marks" aria-hidden="true"></div>
     </section>
@@ -140,7 +197,7 @@
       <ul class="manifesto__values reveal reveal-d3">
         <li><span class="value-stitch" aria-hidden="true"></span><span data-i18n="manifesto.v1">Nessun template, mai</span></li>
         <li><span class="value-stitch" aria-hidden="true"></span><span data-i18n="manifesto.v2">Codice leggero, fatto a mano</span></li>
-        <li><span class="value-stitch" aria-hidden="true"></span><span data-i18n="manifesto.v3">Pochi progetti alla volta, seguiti bene</span></li>
+        <li><span class="value-stitch" aria-hidden="true"></span><span data-i18n="manifesto.v3">Preventivo chiaro, voce per voce</span></li>
       </ul>
     </section>
 
@@ -163,7 +220,7 @@
             <li data-i18n="tagli.c1.i3">WhatsApp e telefono integrati</li>
             <li data-i18n="tagli.c1.i4">Veloce, leggibile, pronto per Google</li>
           </ul>
-          <a class="taglio__cta" href="#contatti"><span data-i18n="tagli.cta">Chiedi un preventivo</span><span aria-hidden="true"> →</span></a>
+          <a class="taglio__cta" href="#contatti" data-taglio="vetrina"><span data-i18n="tagli.cta">Chiedi un preventivo su WhatsApp</span><span aria-hidden="true"> →</span></a>
         </article>
 
         <article class="taglio reveal reveal-d2">
@@ -176,7 +233,7 @@
             <li data-i18n="tagli.c2.i3">Più lingue per più mercati</li>
             <li data-i18n="tagli.c2.i4">SEO e statistiche di visita</li>
           </ul>
-          <a class="taglio__cta" href="#contatti"><span data-i18n="tagli.cta">Chiedi un preventivo</span><span aria-hidden="true"> →</span></a>
+          <a class="taglio__cta" href="#contatti" data-taglio="business"><span data-i18n="tagli.cta">Chiedi un preventivo su WhatsApp</span><span aria-hidden="true"> →</span></a>
         </article>
 
         <article class="taglio taglio--alta reveal reveal-d3">
@@ -190,7 +247,33 @@
             <li data-i18n="tagli.c3.i3">Copywriting bilingue</li>
             <li data-i18n="tagli.c3.i4">Cura continua dopo la consegna</li>
           </ul>
-          <a class="taglio__cta" href="#contatti"><span data-i18n="tagli.cta">Chiedi un preventivo</span><span aria-hidden="true"> →</span></a>
+          <a class="taglio__cta" href="#contatti" data-taglio="alta"><span data-i18n="tagli.cta">Chiedi un preventivo su WhatsApp</span><span aria-hidden="true"> →</span></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== IL PREVENTIVO ===================== -->
+    <div class="seam" aria-hidden="true"><span class="seam__line"></span><span class="seam__knot"></span></div>
+
+    <section class="prev section" id="preventivo">
+      <p class="section__label mono reveal" data-i18n="prev.label">PEZZO 03 — IL PREVENTIVO</p>
+      <h2 class="section__title reveal reveal-d1"><span data-i18n="prev.title1">Cosa entra</span> <em data-i18n="prev.title2">nel preventivo.</em></h2>
+      <div class="prev__grid">
+        <article class="prev__item reveal reveal-d1">
+          <h3 class="prev__title" data-i18n="prev.b1.t">Da cosa dipende</h3>
+          <p class="prev__desc" data-i18n="prev.b1.d">Dalle misure della tua attività: quante pagine, quante lingue, quali funzioni (prenotazioni, moduli, e-commerce), quanti testi e foto c'è da preparare, quanto devono essere su misura le animazioni. Lo scriviamo voce per voce, dopo una prima chiacchierata senza impegno.</p>
+        </article>
+        <article class="prev__item reveal reveal-d2">
+          <h3 class="prev__title" data-i18n="prev.b2.t">Cosa c'è sempre</h3>
+          <p class="prev__desc" data-i18n="prev.b2.d">Un design disegnato sulla tua attività, testi e foto curati con te, WhatsApp e telefono a portata di dito, un sito veloce e leggibile sul telefono, pronto per Google. E un'anteprima da provare insieme prima di andare online.</p>
+        </article>
+        <article class="prev__item reveal reveal-d1">
+          <h3 class="prev__title" data-i18n="prev.b3.t">Sul tuo dominio</h3>
+          <p class="prev__desc" data-i18n="prev.b3.d">Il sito va online sul tuo dominio, col nome della tua attività. Il codice è HTML, CSS e JavaScript scritti a mano, senza framework: leggero e facile da far crescere.</p>
+        </article>
+        <article class="prev__item reveal reveal-d2">
+          <h3 class="prev__title" data-i18n="prev.b4.t">Dopo la consegna</h3>
+          <p class="prev__desc" data-i18n="prev.b4.d">Restiamo a disposizione per ritocchi e modifiche: orari che cambiano, foto nuove, una pagina in più. Basta scriverci.</p>
         </article>
       </div>
     </section>
@@ -199,26 +282,26 @@
     <div class="seam" aria-hidden="true"><span class="seam__line"></span><span class="seam__knot"></span></div>
 
     <section class="lavoro section" id="lavori">
-      <p class="section__label mono reveal" data-i18n="lavoro.label">PEZZO 03 — UN LAVORO RECENTE</p>
+      <p class="section__label mono reveal" data-i18n="lavoro.label">PEZZO 04 — UNA PROPOSTA DAL CAMPIONARIO</p>
       <h2 class="section__title reveal reveal-d1"><span data-i18n="lavoro.title1">Pasticceria Marí,</span> <em data-i18n="lavoro.title2">Milano.</em></h2>
-      <p class="section__sub reveal reveal-d2" data-i18n="lavoro.sub">Una pasticceria artigianale in via Montegani: brioche sfornate all'alba e torte su misura. Le serviva una vetrina all'altezza del banco — l'abbiamo cucita in italiano e in inglese.</p>
+      <p class="section__sub reveal reveal-d2" data-i18n="lavoro.sub">Una pasticceria artigianale in via Montegani: brioche sfornate all'alba e torte su misura. Per lei abbiamo disegnato una vetrina in italiano e in inglese, con la richiesta delle torte su WhatsApp. È una proposta, online in anteprima su un indirizzo di prova.</p>
 
       <div class="lavoro__showcase reveal reveal-d2">
-        <a class="lavoro__browser" href="https://rotenzark.github.io/pasticceria-mari/" target="_blank" rel="noopener" aria-label="Apri il sito della Pasticceria Marí in una nuova scheda" data-i18n-attr="aria-label:lavoro.open">
+        <a class="lavoro__browser" href="https://rotenzark.github.io/pasticceria-mari/" target="_blank" rel="noopener" aria-label="Apri l'anteprima della Pasticceria Marí in una nuova scheda" data-i18n-attr="aria-label:lavoro.open">
           <span class="lavoro__browser-bar" aria-hidden="true">
             <span class="dot"></span><span class="dot"></span><span class="dot"></span>
             <span class="lavoro__browser-url mono">pasticceria-mari</span>
           </span>
-          <img src="assets/img/mari-desktop.jpg" alt="Homepage del sito Pasticceria Marí: interno del locale con tavolini e vetrine, titolo di benvenuto e pulsante per ordinare una torta" data-i18n-attr="alt:lavoro.imgalt" width="1440" height="900">
+          <img src="assets/img/mini/mari-desktop-720.webp" srcset="assets/img/mini/mari-desktop-480.webp 480w, assets/img/mini/mari-desktop-720.webp 720w, assets/img/mari-desktop.jpg 1440w" sizes="(min-width: 900px) 860px, 92vw" alt="Homepage della proposta per la Pasticceria Marí: interno del locale con tavolini e vetrine, titolo di benvenuto e pulsante per ordinare una torta" data-i18n-attr="alt:lavoro.imgalt" width="1440" height="900" loading="lazy" decoding="async">
         </a>
         <div class="lavoro__phone" aria-hidden="true">
-          <img src="assets/img/mari-mobile.jpg" alt="" width="780" height="1688">
+          <img src="assets/img/mari-mobile.jpg" alt="" width="780" height="1688" loading="lazy" decoding="async">
         </div>
       </div>
 
       <dl class="lavoro__specs reveal reveal-d3">
         <div class="lavoro__spec">
-          <dt class="mono" data-i18n="lavoro.s1t">COMMESSA</dt>
+          <dt class="mono" data-i18n="lavoro.s1t">IL PROGETTO</dt>
           <dd data-i18n="lavoro.s1d">Sito vetrina con richiesta torte via WhatsApp</dd>
         </div>
         <div class="lavoro__spec">
@@ -230,22 +313,24 @@
           <dd data-i18n="lavoro.s3d">Italiano e inglese</dd>
         </div>
         <div class="lavoro__spec">
-          <dt class="mono" data-i18n="lavoro.s4t">CONSEGNA</dt>
-          <dd data-i18n="lavoro.s4d">Online, con le foto vere del locale</dd>
+          <dt class="mono" data-i18n="lavoro.s4t">DOVE SI VEDE</dt>
+          <dd data-i18n="lavoro.s4d">In anteprima, su un indirizzo di prova</dd>
         </div>
       </dl>
 
       <p class="lavoro__visit reveal reveal-d4">
         <a class="btn btn--primary" href="lavori.html" data-i18n="lavoro.all">Sfoglia il campionario</a>
-        <a class="btn btn--ghost" href="https://rotenzark.github.io/pasticceria-mari/" target="_blank" rel="noopener" data-i18n="lavoro.visit">Visita il sito online</a>
+        <a class="btn btn--ghost" href="https://rotenzark.github.io/pasticceria-mari/" target="_blank" rel="noopener" data-i18n="lavoro.visit">Apri l'anteprima</a>
       </p>
+
+      <p class="lavoro__consegnato reveal"><span data-i18n="lavoro.consegnato">Un lavoro consegnato: il sito di A.S.FA. Sicilia ODV, associazione di Palermo e Monreale, online sul suo dominio in tre lingue, italiano, inglese e arabo.</span> <a href="https://asfasiciliaodv.it/" target="_blank" rel="noopener" data-i18n="lavoro.consegnato.link">Visita asfasiciliaodv.it</a></p>
     </section>
 
     <!-- ===================== METODO ===================== -->
     <div class="seam" aria-hidden="true"><span class="seam__line"></span><span class="seam__knot"></span></div>
 
     <section class="metodo section" id="metodo">
-      <p class="section__label mono reveal" data-i18n="metodo.label">PEZZO 04 — IL METODO</p>
+      <p class="section__label mono reveal" data-i18n="metodo.label">PEZZO 05 — IL METODO</p>
       <h2 class="section__title reveal reveal-d1"><span data-i18n="metodo.title1">Come si cuce</span> <em data-i18n="metodo.title2">un sito.</em></h2>
 
       <ol class="metodo__steps">
@@ -276,8 +361,9 @@
     <div class="seam" aria-hidden="true"><span class="seam__line"></span><span class="seam__knot"></span></div>
 
     <section class="studio section" id="studio">
-      <p class="section__label mono reveal" data-i18n="studio.label">PEZZO 05 — GLI ARTIGIANI</p>
+      <p class="section__label mono reveal" data-i18n="studio.label">PEZZO 06 — GLI ARTIGIANI</p>
       <h2 class="section__title reveal reveal-d1"><span data-i18n="studio.title1">Quattro mani,</span> <em data-i18n="studio.title2">un solo filo.</em></h2>
+      <p class="studio__chi reveal reveal-d2" data-i18n="studio.chi">Bespoke Studio è uno studio di web design nato a Milano nel 2026. Siamo in due: Kristian Cimò disegna e sviluppa i siti, Stephane Boka segue i clienti. Realizziamo siti vetrina per bar, ristoranti, negozi, studi e botteghe, e siti con più pagine, lingue e funzioni per le aziende. Ogni sito è scritto a mano, in HTML, CSS e JavaScript, senza template né framework: per questo è leggero e veloce sul telefono. Si comincia con una chiacchierata senza impegno, poi un preventivo chiaro, voce per voce, e un'anteprima da provare insieme; il sito va online sul tuo dominio e dopo restiamo a disposizione per i ritocchi. Rispondiamo in giornata su WhatsApp, al telefono o per email, dal lunedì al sabato.</p>
 
       <div class="studio__grid">
         <article class="artigiano reveal reveal-d2">
@@ -295,17 +381,35 @@
       </div>
     </section>
 
+    <!-- ===================== LE DOMANDE ===================== -->
+    <div class="seam" aria-hidden="true"><span class="seam__line"></span><span class="seam__knot"></span></div>
+
+    <section class="faq section" id="domande">
+      <p class="section__label mono reveal" data-i18n="faq.label">PEZZO 07 — LE DOMANDE</p>
+      <h2 class="section__title reveal reveal-d1"><span data-i18n="faq.title1">Prima di</span> <em data-i18n="faq.title2">scriverci.</em></h2>
+      <div class="faq__list">
+        <details class="faq__item"><summary data-i18n="faq.q1">Quanto costa un sito?</summary><p data-i18n="faq.a1">Dipende dalle misure: pagine, lingue, funzioni, testi e foto da preparare. Dopo una prima chiacchierata senza impegno ti scriviamo un preventivo chiaro, voce per voce, senza listino e senza sorprese.</p></details>
+        <details class="faq__item"><summary data-i18n="faq.q2">Usate dei template?</summary><p data-i18n="faq.a2">No. Ogni sito è disegnato e sviluppato a mano, in HTML, CSS e JavaScript, senza framework.</p></details>
+        <details class="faq__item"><summary data-i18n="faq.q3">Il sito funziona bene sul telefono?</summary><p data-i18n="faq.a3">Sì: lo sviluppiamo e lo proviamo su telefono, tablet e computer, in tutte le lingue del sito.</p></details>
+        <details class="faq__item"><summary data-i18n="faq.q4">Il sito sarà su Google?</summary><p data-i18n="faq.a4">Lo prepariamo per Google: pagine veloci, titoli e descrizioni curati, i dati della tua attività scritti come Google li legge. La posizione nei risultati nessuno può prometterla, e noi non la promettiamo.</p></details>
+        <details class="faq__item"><summary data-i18n="faq.q5">Su che indirizzo va online?</summary><p data-i18n="faq.a5">Sul tuo dominio, col nome della tua attività.</p></details>
+        <details class="faq__item"><summary data-i18n="faq.q6">Fate siti in inglese o in altre lingue?</summary><p data-i18n="faq.a6">Sì: italiano e inglese, e altre lingue quando servono. Uno dei nostri siti è online in tre lingue, con l'arabo.</p></details>
+        <details class="faq__item"><summary data-i18n="faq.q7">E dopo la consegna?</summary><p data-i18n="faq.a7">Restiamo a disposizione per ritocchi e modifiche: orari, foto, testi, una pagina in più.</p></details>
+        <details class="faq__item"><summary data-i18n="faq.q8">Lavorate solo a Milano?</summary><p data-i18n="faq.a8">Siamo a Milano e incontriamo volentieri i clienti di persona, ma lavoriamo anche a distanza: uno dei nostri siti è per un'associazione di Palermo.</p></details>
+      </div>
+    </section>
+
     <!-- ===================== CONTATTI ===================== -->
     <div class="seam" aria-hidden="true"><span class="seam__line"></span><span class="seam__knot"></span></div>
 
     <section class="contatti section" id="contatti">
-      <p class="section__label mono reveal" data-i18n="contatti.label">PEZZO 06 — LE MISURE</p>
+      <p class="section__label mono reveal" data-i18n="contatti.label">PEZZO 08 — LE MISURE</p>
       <h2 class="section__title reveal reveal-d1"><span data-i18n="contatti.title1">Raccontaci</span> <em data-i18n="contatti.title2">la tua attività.</em></h2>
       <p class="section__sub reveal reveal-d2" data-i18n="contatti.sub">Il primo appuntamento è una chiacchierata senza impegno: tu ci racconti cosa fai, noi ti diciamo cosa faremmo. Scrivici come preferisci.</p>
 
       <div class="contatti__grid">
         <div class="contatti__channels reveal reveal-d2">
-          <a class="channel" href="https://wa.me/393896214452" target="_blank" rel="noopener">
+          <a class="channel" href="https://wa.me/393896214452?text=Ciao%20Bespoke%20Studio!%20Vorrei%20un%20preventivo%20per%20un%20sito.%20%5Brif%3A%20contatti%5D" data-wa="contatti" target="_blank" rel="noopener">
             <span class="channel__label mono">WHATSAPP</span>
             <span class="channel__value">+39 389 621 4452</span>
             <span class="channel__hint" data-i18n="contatti.wa.hint">Il modo più rapido: rispondiamo in giornata</span>
@@ -345,7 +449,8 @@
             <textarea id="f-msg" name="messaggio" rows="3"></textarea>
           </div>
           <p class="form__error mono" id="form-error" role="alert" hidden data-i18n="form.error">COMPILA NOME E ATTIVITÀ PER INVIARE</p>
-          <button type="submit" class="btn btn--primary form__submit" data-i18n="form.submit">Invia su WhatsApp</button>
+          <button type="submit" class="btn btn--primary form__submit" data-i18n="form.submit">Prepara il messaggio su WhatsApp</button>
+          <p class="form__ok" id="form-ok" role="status" hidden data-i18n="form.ok">Abbiamo aperto WhatsApp con il tuo messaggio già scritto: premi Invia per mandarcelo. Se non si è aperto, scrivici al +39 389 621 4452.</p>
           <p class="form__alt" data-i18n-html="form.alt">Preferisci scrivere con calma? <a href="mailto:info@bespokestud.io?subject=Richiesta%20preventivo%20sito%20web">Mandaci un'email</a>.</p>
         </form>
       </div>
@@ -366,12 +471,15 @@
         <a href="lavori.html" data-i18n="nav.work">Lavori</a>
         <a href="#metodo" data-i18n="nav.method">Metodo</a>
         <a href="#studio" data-i18n="nav.studio">Studio</a>
+        <a href="#domande" data-i18n="nav.faq">Domande</a>
         <a href="#contatti" data-i18n="nav.contact">Contatti</a>
+        <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
       </nav>
-      <p class="footer__legal mono">© <span id="year">2026</span> BESPOKE STUDIO — <span data-i18n="footer.legal">TUTTI I DIRITTI RISERVATI</span></p>
+      <div>
+        <p class="footer__legal mono">© <span id="year">2026</span> BESPOKE STUDIO · MILANO — <span data-i18n="footer.legal">TUTTI I DIRITTI RISERVATI</span></p>
+        <p class="footer__updated mono"><span data-i18n="camp.aggiornato">Aggiornato il</span> 2/10/2026</p>
+      </div>
     </div>
   </footer>
-
-  <script src="js/main.js?v=311"></script>
 </body>
 </html>
