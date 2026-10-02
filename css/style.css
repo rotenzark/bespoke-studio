@@ -1141,7 +1141,7 @@ a { color: inherit; }
 .camp-note {
   margin-top: 60px;
   color: var(--greige);
-  opacity: 0.7;
+  opacity: 0.95;
   font-size: 0.62rem;
 }
 
