@@ -1050,8 +1050,8 @@ a { color: inherit; }
 }
 
 /* filtro per settore: contatore nel chip + micro-tag di categoria */
-.chip__count { opacity: 0.5; font-variant-numeric: tabular-nums; margin-inline-start: 0.3em; }
-.chip.is-active .chip__count { opacity: 0.85; }
+.chip__count { opacity: 0.85; font-variant-numeric: tabular-nums; margin-inline-start: 0.3em; }
+.chip.is-active .chip__count { opacity: 1; }
 .progetto__meta .tag { color: var(--thread-hi); }
 
 .progetti {
@@ -1431,6 +1431,8 @@ a { color: inherit; }
   font-size: 0.88rem;
 }
 .card-progetto__piu summary {
+  display: block;
+  padding: 6px 0;
   cursor: pointer;
   color: var(--bone);
   font-weight: 500;
